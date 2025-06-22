@@ -1,0 +1,65 @@
+import { useEffect } from 'react';
+import { Button } from '@/components/ui/button';
+import { ArrowLeft } from 'lucide-react';
+import { certificates } from '../data/certificate-data';
+import Header from './Header';
+import { Link } from 'react-router-dom';
+
+const CertificationsPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return (
+    <div className="min-h-screen bg-background">
+      <Header onCertificationsClick={() => {}} />
+
+      <div className="container mx-auto px-4">
+        <div className="mb-8 mt-28">
+          <Link to="/#intro" state={{ scrollTo: 'intro' }}>
+            <Button variant="ghost" className="mb-4">
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Back to Portfolio
+            </Button>
+          </Link>
+          <div className="text-center">
+            <h1 className="text-4xl font-bold mb-4">CERTIFICATIONS</h1>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {certificates.map((cert, index) => (
+            <div
+              key={index}
+              className="flex flex-col justify-between items-center p-4 border rounded-xl shadow-md bg-white dark:bg-zinc-800 text-foreground dark:text-white h-full"
+            >
+              <div className="flex flex-col items-center gap-2 flex-grow w-full">
+                <img
+                  src={cert.image}
+                  alt={`${cert.name} certificate`}
+                  className="w-full max-h-64 object-contain rounded-lg shadow-sm"
+                />
+                <h2 className="text-lg font-bold text-center text-foreground dark:text-white">{cert.title}</h2>
+                <h3 className="text-base font-medium text-center text-foreground/80 dark:text-white/70">{cert.organization}</h3>
+                <h3 className="text-base font-medium text-center text-foreground/80 dark:text-white/70">{cert.issueDate}</h3>
+              </div>
+
+                <a
+                  href={cert.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 w-full text-center font-semibold py-2 px-4 rounded-lg shadow-md 
+                             bg-primary text-white dark:bg-muted dark:text-white 
+                             hover:bg-primary/90 transition-all"
+                >
+                  View Certificate
+                </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default CertificationsPage;

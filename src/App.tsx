@@ -1,0 +1,74 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import { Toaster } from "@/components/ui/toaster";
+import { Toaster as Sonner } from "@/components/ui/sonner";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Index from "./pages/Index";
+import NotFound from "./pages/NotFound";
+import MilkProducts from "./pages/MilkProducts";
+import UserAuthSystem from "./pages/UserAuthSystem";
+import ScanAndSee from "./pages/ScanAndSee";
+import ClapSwitch from "./pages/ClapSwitch";
+import ToDoList from "./pages/ToDoList";
+import TurtleCrossingGame from "./pages/TurtleCrossingGame";
+import SnakeGame from "./pages/SnakeGame";
+import QuizApp from "./pages/QuizApp";
+import WorkSessions from "./pages/WorkSessions";
+import PasswordManager from "./pages/PasswordManager";
+import PaddleBattle from "./pages/PaddleBattle";
+import CertificationsPage from "./components/CertificationsPage";
+
+const queryClient = new QueryClient();
+
+const ScrollHandler = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    const sectionId = location.state?.scrollTo;
+
+    if (sectionId && location.pathname === '/') {
+      const el = document.getElementById(sectionId);
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: 'smooth' });
+        }, 200);
+      }
+    }
+  }, [location]);
+
+  return null;
+};
+
+
+const App = () => (
+  <QueryClientProvider client={queryClient}>
+    <TooltipProvider>
+      <Toaster />
+      <Sonner />
+      <BrowserRouter>
+        <ScrollHandler />
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/certifications" element={<CertificationsPage onBack={() => window.history.back()} />} />
+          <Route path="/project/milk-products" element={<MilkProducts />} />
+          <Route path="/project/userauth" element={<UserAuthSystem />} />
+          <Route path="/project/scan" element={<ScanAndSee />} />
+          <Route path="/project/clap" element={<ClapSwitch />} />
+          <Route path="/project/todo" element={<ToDoList />} />
+          <Route path="/project/turtle" element={<TurtleCrossingGame />} />
+          <Route path="/project/snake" element={<SnakeGame />} />
+          <Route path="/project/quiz" element={<QuizApp />} />
+          <Route path="/project/work" element={<WorkSessions />} />
+          <Route path="/project/pass" element={<PasswordManager />} />
+          <Route path="/project/padbat" element={<PaddleBattle />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </TooltipProvider>
+  </QueryClientProvider>
+);
+
+export default App;
