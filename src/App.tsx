@@ -20,6 +20,7 @@ import WorkSessions from "./pages/WorkSessions";
 import PasswordManager from "./pages/PasswordManager";
 import PaddleBattle from "./pages/PaddleBattle";
 import CertificationsPage from "./components/CertificationsPage";
+import Footer from "@/components/Footer";
 
 const queryClient = new QueryClient();
 

@@ -56,7 +56,12 @@ const ContactSection = () => {
           <div>
             <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
             <div className="space-y-6">
-              <div className="flex items-center gap-4">
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=dnyaneshsb20@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 hover:opacity-80 transition-opacity"
+              >
                 <div className="p-3 bg-primary/10 rounded-lg">
                   <Mail className="w-6 h-6 text-primary" />
                 </div>
@@ -64,8 +69,7 @@ const ContactSection = () => {
                   <h4 className="font-medium">Email</h4>
                   <p className="text-muted-foreground">dnyaneshsb20@gmail.com</p>
                 </div>
-              </div>
-
+              </a>
               <a
                 href="https://www.linkedin.com/in/dnyanesh-badave-0b0649263"
                 target="_blank"

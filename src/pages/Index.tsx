@@ -9,6 +9,7 @@ import ProjectsSection from '@/components/ProjectsSection';
 import MiniProjectsSection from '@/components/MiniProjectsSection';
 import ContactSection from '@/components/ContactSection';
 import CertificationsPage from '@/components/CertificationsPage';
+import Footer from "@/components/Footer";
 
 const Index = () => {
   const location = useLocation();
@@ -59,6 +60,7 @@ const Index = () => {
       <ProjectsSection />
       <MiniProjectsSection />
       <ContactSection />
+      <Footer/>
     </div>
   );
 };

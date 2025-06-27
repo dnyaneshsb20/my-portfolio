@@ -13,21 +13,21 @@ const AboutSection = () => {
             <CardContent className="p-8 space-y-6 text-justify">
               <div>
                 <h3 className="text-xl font-semibold text-primary mb-2 text-center">👨‍💻 Who I Am</h3>
-                <p className="text-muted-foreground">
+                <p className="text-foreground">
                   Hi! I am a passionate and curious MCA student at <strong>P.E.S. Modern College of Engineering, Pune</strong>, with a strong interest in <strong>software development</strong>, <strong>automation</strong>, and <strong>problem-solving</strong>. I’ve gained hands-on experience in <strong>C#</strong>, <strong>Python</strong>, <strong>Java</strong>, <strong>HTML</strong>, and <strong>CSS</strong>, and love creating real-world projects that solve actual problems.
                 </p>
               </div>
 
               <div>
                 <h3 className="text-xl font-semibold text-primary mb-2 text-center">🎯 What Drives Me</h3>
-                <p className="text-muted-foreground">
+                <p className="text-foreground">
                   I love solving problems, building useful tools, and learning new technologies. I enjoy working in teams and always stay open to new experiences and opportunities.
                 </p>
               </div>
 
               <div>
                 <h3 className="text-xl font-semibold text-primary mb-2 text-center">🎨 Hobbies</h3>
-                <p className="text-muted-foreground text-center">Cricket 🏏 | Music 🎵 | Traveling 🌍</p>
+                <p className="text-foreground text-center">Cricket 🏏 | Music 🎵 | Traveling 🌍</p>
               </div>
             </CardContent>
           </Card>
@@ -35,7 +35,7 @@ const AboutSection = () => {
           <Card>
             <CardContent className="p-8 text-justify">
               <h3 className="text-xl font-semibold text-primary mb-4 text-center">📚 Learning Beyond the Academics</h3>
-              <ul className="list-disc list-inside text-muted-foreground space-y-3">
+              <ul className="list-disc list-inside text-foreground space-y-3">
                 <li>
                   Participated in a session on <strong>Machine Learning & Generative AI</strong>, led by <strong>Bhushan Garware</strong>, Senior Data Scientist and AI-Consultant at <strong>Google, India</strong>, which gave me a deeper understanding of AI-driven innovation.
                 </li>
