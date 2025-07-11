@@ -18,6 +18,7 @@ import SnakeGame from "./pages/SnakeGame";
 import QuizApp from "./pages/QuizApp";
 import WorkSessions from "./pages/WorkSessions";
 import PasswordManager from "./pages/PasswordManager";
+import EducationPage from "./pages/EducationPage";
 import PaddleBattle from "./pages/PaddleBattle";
 import CertificationsPage from "./components/CertificationsPage";
 import Footer from "@/components/Footer";
@@ -65,6 +66,7 @@ const App = () => (
           <Route path="/project/work" element={<WorkSessions />} />
           <Route path="/project/pass" element={<PasswordManager />} />
           <Route path="/project/padbat" element={<PaddleBattle />} />
+          <Route path="/education" element={<EducationPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

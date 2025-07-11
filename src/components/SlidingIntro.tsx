@@ -31,9 +31,11 @@ const SlidingIntro = ({ onComplete }: SlidingIntroProps) => {
 
   const handleDownloadResume = () => {
     const link = document.createElement('a');
-    link.href = 'https://drive.google.com/uc?export=download&id=1RwWAWse6t2kk8M3yBhJg6ndjNDKoejob';
-    link.download = 'Dnyanesh_Badave.pdf';
+    link.href = 'https://drive.google.com/uc?export=download&id=1RS0J1983VMYyJHGmCdMfo76GLFfOR7lN';
+    link.setAttribute('download', 'Dnyanesh_Badave.pdf'); // File name for the download
+    document.body.appendChild(link);
     link.click();
+    document.body.removeChild(link);
   };
 
   return (

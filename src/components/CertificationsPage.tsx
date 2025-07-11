@@ -4,6 +4,7 @@ import { ArrowLeft } from 'lucide-react';
 import { certificates } from '../data/certificate-data';
 import Header from './Header';
 import { Link } from 'react-router-dom';
+import Footer from '@/components/Footer';
 
 const CertificationsPage = () => {
   useEffect(() => {
@@ -14,7 +15,7 @@ const CertificationsPage = () => {
     <div className="min-h-screen bg-background">
       <Header onCertificationsClick={() => {}} />
 
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 pb-10">
         <div className="mb-8 mt-28">
           <Link to="/#intro" state={{ scrollTo: 'intro' }}>
             <Button variant="ghost" className="mb-4">
@@ -58,6 +59,7 @@ const CertificationsPage = () => {
           ))}
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };
