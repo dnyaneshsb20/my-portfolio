@@ -14,7 +14,7 @@ import certImage13 from '../assets/certificates/IPR-EVENT.jpg';
 import certImage14 from '../assets/certificates/nielit.jpg';
 import certImage15 from '../assets/certificates/all-in-one.jpg';
 import certImage16 from '../assets/certificates/Udemy-SQL.jpg';
-import certImage17 from '../assets/certificates/CsharpIntermediates.jpg'
+import certImage17 from '../assets/certificates/CSharpIntermediates.jpg'
 import certImage18 from '../assets/certificates/GenAI.png'
 import certImage19 from '../assets/certificates/Responsible-AI.png'
 import certImage20 from '../assets/certificates/Large-Language-Models-GC.png'
