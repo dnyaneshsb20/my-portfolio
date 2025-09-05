@@ -73,24 +73,27 @@ export default function ExperiencePage() {
       {/* Card */}
       <Card className="relative w-full max-w-5xl mx-auto p-5 bg-white dark:bg-zinc-800 shadow-md rounded-lg">
         {/* Timeline Line */}
-        <div className="absolute -left-6 top-0 h-full border-l border-primary dark:border-white/30"></div>
+        <div className="hidden lg:block absolute -left-6 top-0 h-full border-l border-primary dark:border-white/30"></div>
 
         {/* Timeline Circle */}
-        <div className="absolute -left-9 top-6 w-6 h-6 rounded-full bg-primary dark:bg-white border-2 border-white dark:border-black"></div>
+        <div className="hidden lg:block absolute -left-9 top-6 w-6 h-6 rounded-full bg-primary dark:bg-white border-2 border-white dark:border-black"></div>
 
         <div className="flex flex-col md:flex-row md:items-center gap-4">
-          <img
-            src={exp.logo}
-            alt={exp.company}
-            className="w-[15%] h-[15%] object-contain rounded"
-          />
-          <div>
+          <div className="flex justify-center w-full md:w-auto">
+            <img
+              src={exp.logo}
+              alt={exp.company}
+              className="w-40 md:w-[15%] md:min-w-[150px] h-40 md:h-auto object-contain rounded"
+            />
+          </div>
+          {/* Text */}
+          <div className="space-y-1 text-justify md:text-left w-full">
             <h3 className="text-2xl font-semibold">{exp.role}</h3>
             <p className="text-md font-medium">{exp.company} • {exp.type}</p>
-            <p className="text-sm ">
+            <p className="text-sm">
               {exp.duration} • {exp.startDate && calculateExperience(exp.startDate, exp.endDate)}
             </p>
-            <p className="mt-2 text-justify">{exp.description}</p>
+            <p className="mt-2">{exp.description}</p>
           </div>
         </div>
       </Card>

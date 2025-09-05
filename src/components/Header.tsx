@@ -162,6 +162,17 @@ const Header = ({ onCertificationsClick }: HeaderProps) => {
                     </button>
                   );
                 }
+                if (item.label === 'Experience') {
+                  return (
+                    <button
+                      key={item.id}
+                      onClick={handleExperienceClick} // <-- use handleExperienceClick here
+                      className="text-left text-foreground hover:text-primary transition-colors"
+                    >
+                      {item.label}
+                    </button>
+                  );
+                }
                 return (
                   <button
                     key={item.id}

@@ -77,19 +77,26 @@ export default function EducationPage() {
           </div>
         </div>
 
-        <div className="flex flex-col items-center gap-6 px-4 md:px-0">
+        <div className="flex flex-col items-center gap-6">
           {educationList.map((edu) => (
             <Card
               key={edu.id}
-              className="w-full max-w-5xl flex flex-col items-start p-3 border rounded-lg shadow-md bg-white dark:bg-zinc-800 text-foreground dark:text-white"
+              className="w-full max-w-5xl p-4 border rounded-xl shadow-md bg-white dark:bg-zinc-800 text-foreground dark:text-white"
             >
-              <div className="flex gap-4 items-start w-full">
-                <img
-                  src={edu.logo}
-                  alt={edu.title}
-                  className="w-32 h-32 object-contain rounded"
-                />
-                <div className="space-y-1">
+              {/* Mobile: stacked | Tablet/Desktop: horizontal */}
+              <div className="flex flex-col sm:flex-row gap-4 sm:items-start w-full">
+                
+                {/* Logo */}
+                <div className="flex justify-center w-full sm:w-auto">
+                  <img
+                    src={edu.logo}
+                    alt={edu.title}
+                    className="w-32 h-32 object-contain rounded"
+                  />
+                </div>
+
+                {/* Text Info */}
+                <div className="space-y-1 text-justify sm:text-left w-full">
                   <h3 className="text-lg font-bold">{edu.title}</h3>
                   <p>
                     <span className="font-semibold">Course / Degree:</span> {edu.degree}
