@@ -14,33 +14,31 @@ const ContactSection = () => {
     message: ''
   });
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    try {
-      const response = await fetch('https://formspree.io/f/mrbkarzd', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-      });
-
-      if (response.ok) {
-        alert('✅ Message sent successfully!');
-        setFormData({ name: '', email: '', message: '' });
-      } else {
-        alert('❌ Something went wrong. Please try again.');
-      }
-    } catch (error) {
-      alert('❌ Error sending message.');
-    }
-  };
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
+    });
+  };
+
+  const handleGmailSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const to = "dnyaneshsb20@gmail.com";
+    const subject = encodeURIComponent(`Message from ${formData.name}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    );
+
+    // Open Gmail in a new tab
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${subject}&body=${body}`;
+    window.open(gmailUrl, "_blank");
+
+    // Clear all fields
+    setFormData({
+      name: '',
+      email: '',
+      message: ''
     });
   };
 
@@ -153,7 +151,7 @@ const ContactSection = () => {
               <CardDescription>I'd love to hear from you</CardDescription>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form onSubmit={handleGmailSubmit} className="space-y-4">
                 <div>
                   <Label htmlFor="name">Name</Label>
                   <Input

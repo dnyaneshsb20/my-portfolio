@@ -14,6 +14,10 @@ import certImage13 from '../assets/certificates/IPR-EVENT.jpg';
 import certImage14 from '../assets/certificates/nielit.jpg';
 import certImage15 from '../assets/certificates/all-in-one.jpg';
 import certImage16 from '../assets/certificates/Udemy-SQL.jpg';
+import certImage17 from '../assets/certificates/CsharpIntermediates.jpg'
+import certImage18 from '../assets/certificates/GenAI.png'
+import certImage19 from '../assets/certificates/Responsible-AI.png'
+import certImage20 from '../assets/certificates/Large-Language-Models-GC.png'
 
 export const certificates = [
   {
@@ -43,6 +47,34 @@ export const certificates = [
     issueDate: "November 2024",
     url: "https://www.mindluster.com/student/certificate/9ee4b9fe",
     image: certImage8,
+  },
+  {
+    title: "Introduction to Generative AI",
+    organization: "Google Cloud",
+    issueDate: "August 2025",
+    url: "https://www.cloudskillsboost.google/public_profiles/22dbd1ec-cbf8-43cf-9f1c-70be70b26436/badges/17525635",
+    image: certImage18,
+  },
+  {
+    title: "Introduction to Responsible AI",
+    organization: "Google Cloud",
+    issueDate: "August 2025",
+    url: "https://www.cloudskillsboost.google/public_profiles/22dbd1ec-cbf8-43cf-9f1c-70be70b26436/badges/17526956",
+    image: certImage19,
+  },
+  {
+    title: "Introduction to Large Language Models",
+    organization: "Google Cloud",
+    issueDate: "August 2025",
+    url: "https://www.cloudskillsboost.google/public_profiles/22dbd1ec-cbf8-43cf-9f1c-70be70b26436/badges/17525785",
+    image: certImage20,
+  },
+  {
+    title: "Course on Computer Concepts (C.C.C.)",
+    organization: "National Institute of Electronics & Information Technology (NIELIT)",
+    issueDate: "January 2020",
+    url: "https://drive.google.com/file/d/1G4WtOzbiFD_SuRV4Wf2DP3hJ5XTv6clw/view?usp=sharing", 
+    image: certImage14,
   },
   {
     title: "Python (Basic)",
@@ -80,7 +112,7 @@ export const certificates = [
     image: certImage9,
   },
   {
-    title: "C# Programming",
+    title: "C# Programming for Beginners",
     organization: "Udemy",
     issueDate: "March 2025",
     url: "https://www.udemy.com/certificate/UC-ce53814e-2702-4187-990d-30acdb4bd236/",
@@ -101,20 +133,6 @@ export const certificates = [
     image: certImage12,
   },
   {
-    title: "IP Awareness/Training Program",
-    organization: "Intellectual Property Office, India",
-    issueDate: "May 2025",
-    url: "https://drive.google.com/file/d/1UaK4aGNY1xfZ9p54AStU7OfAH5DnSOTY/view?usp=sharing", 
-    image: certImage13
-  },
-  {
-    title: "Course on Computer Concepts (C.C.C.)",
-    organization: "National Institute of Electronics & Information Technology (NIELIT)",
-    issueDate: "January 2020",
-    url: "https://drive.google.com/file/d/1G4WtOzbiFD_SuRV4Wf2DP3hJ5XTv6clw/view?usp=sharing", 
-    image: certImage14,
-  },
-  {
     title: "CSS, JavaScript, PHP And Python Programming All in One Course",
     organization: "Udemy",
     issueDate: "November 2024",
@@ -127,5 +145,19 @@ export const certificates = [
     issueDate: "November 2024", 
     url: "https://www.udemy.com/certificate/UC-e5452ce5-7b68-4a9c-ae03-5219203682c7/", 
     image: certImage16,
+  },
+  {
+    title: "C# Programming for Intermediates",
+    organization: "Udemy",
+    issueDate: "July 2025",
+    url: "https://www.udemy.com/certificate/UC-690b0bc8-22be-4364-852b-89705adca272/",
+    image: certImage17,
+  },
+  {
+    title: "IP Awareness/Training Program",
+    organization: "Intellectual Property Office, India",
+    issueDate: "May 2025",
+    url: "https://drive.google.com/file/d/1UaK4aGNY1xfZ9p54AStU7OfAH5DnSOTY/view?usp=sharing", 
+    image: certImage13
   },
 ];

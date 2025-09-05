@@ -21,35 +21,42 @@ export default function EducationPage() {
     {
       id: 1,
       logo: modernCollege,
-      title: "P.E.S. Modern College of Engineering, Pune",
+      title: "Progressive Education Society's Modern College of Engineering, Pune",
       degree: "Master in Computer Application (MCA)",
       duration: "September 2024 - Present",
-      result: "CGPA: 8.0/10.0",
+      resultLabel: "CGPA:",
+      resultValue: "8.0/10.0",
       description: "Pursuing a Master of Computer Applications (MCA) degree, currently in the first year, with a CGPA of 8.0.",
     },
     {
       id: 2,
       logo: sangameshwarCollege,
       title: "Sangameshwar College, Solapur",
-      degree: "Computer Science, B.Sc",
+      degree: "Bachelor of Science in Entire Computer Science (B.Sc.(ECS))",
       duration: "September 2021 - May 2024",
-      result: "CGPA: 9.13/10.0",
+      resultLabel: "CGPA:",
+      resultValue: "9.13/10.0",
+      description: "Completed a Bachelor of Science in Entire Computer Science (B.Sc.(ECS)) degree with a CGPA of 9.13.",
     },
     {
       id: 3,
       logo: sangameshwarCollege,
       title: "Sangameshwar College, Solapur",
-      degree: "H.S.C.",
+      degree: "Higher Secondary Certificate (H.S.C.)",
       duration: "June 2020 - March 2021",
-      result: "Percentage: 91.83%",
+      resultLabel: "Percentage:",
+      resultValue: "91.83%",
+      description: "Completed Higher Secondary Certificate (HSC) with 91.83%.",
     },
     {
       id: 4,
       logo: jnanaPrabodhini,
       title: "Jnana Prabodhini Prashala, Solapur",
-      degree: "S.S.C.",
+      degree: "Secondary School Certificate (S.S.C.)",
       duration: "June 2018 - March 2019",
-      result: "Percentage: 81.00%",
+      resultLabel: "Percentage:",
+      resultValue: "81.00%",
+      description: "Completed Secondary School Certificate (SSC) with 81.00%.",
     },
   ];
 
@@ -74,13 +81,13 @@ export default function EducationPage() {
           {educationList.map((edu) => (
             <Card
               key={edu.id}
-              className="w-full max-w-4xl flex flex-col items-start p-3 border rounded-lg shadow-sm bg-white dark:bg-zinc-800 text-foreground dark:text-white"
+              className="w-full max-w-5xl flex flex-col items-start p-3 border rounded-lg shadow-md bg-white dark:bg-zinc-800 text-foreground dark:text-white"
             >
               <div className="flex gap-4 items-start w-full">
                 <img
                   src={edu.logo}
                   alt={edu.title}
-                  className="w-16 h-16 object-contain rounded"
+                  className="w-32 h-32 object-contain rounded"
                 />
                 <div className="space-y-1">
                   <h3 className="text-lg font-bold">{edu.title}</h3>
@@ -90,7 +97,9 @@ export default function EducationPage() {
                   <p>
                     <span className="font-semibold">Duration:</span> {edu.duration}
                   </p>
-                  <p>{edu.result}</p>
+                  <p>
+                    <span className="font-semibold">{edu.resultLabel}</span> {edu.resultValue}
+                  </p>
                   {edu.description && <p>{edu.description}</p>}
                 </div>
               </div>

@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
+import logo from "../assets/certificates/favicon.png";
 
 interface HeaderProps {
   onCertificationsClick: () => void;
@@ -34,14 +35,19 @@ const Header = ({ onCertificationsClick }: HeaderProps) => {
     setIsMenuOpen(false);
   };
 
+  const handleExperienceClick = () => {
+    navigate('/experience');
+    setIsMenuOpen(false);
+  };
+
   const handleViewResume = () => {
-    window.open('https://drive.google.com/file/d/1RS0J1983VMYyJHGmCdMfo76GLFfOR7lN/view?usp=sharing', '_blank');
+    window.open('https://drive.google.com/file/d/1XA1d1afEPHvgS46yDTz19HiUbYJ5PGRl/view?usp=sharing', '_blank');
     setIsMenuOpen(false);
   };
 
   const handleDownloadResume = () => {
     const link = document.createElement('a');
-    link.href = 'https://drive.google.com/uc?export=download&id=1RS0J1983VMYyJHGmCdMfo76GLFfOR7lN';
+    link.href = 'https://drive.google.com/uc?export=download&id=1XA1d1afEPHvgS46yDTz19HiUbYJ5PGRl';
     link.download = 'Dnyanesh_Santosh_Badave.pdf'; // This name works for local files, Drive ignores it
     document.body.appendChild(link);
     link.click();
@@ -54,21 +60,37 @@ const Header = ({ onCertificationsClick }: HeaderProps) => {
     { label: 'Skills', id: 'skills' },
     { label: 'Projects', id: 'projects' },
     { label: 'Mini Projects', id: 'mini-projects' },
-    { label: 'Contact', id: 'contact' },
+    { label: 'Experience', id: 'experience' },
     { label: 'Education', id: 'edu' },
+    { label: 'Contact', id: 'contact' },
   ];
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
       <div className="container mx-auto px-4 py-4">
         <nav className="flex items-center justify-between">
-          <div
-            className="text-2xl font-bold cursor-pointer"
-            onClick={() => scrollToSection('intro')}
+          {/* Mobile hamburger button (before logo on left side) */}
+          <Button
+            variant="ghost"
+            size="icon"
+            className="md:hidden mr-2"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            Portfolio
+            {isMenuOpen ? <X /> : <Menu />}
+          </Button>
+
+          {/* Logo */}
+          <div
+            className="cursor-pointer"
+            onClick={() => scrollToSection("intro")}
+          >
+            <div className="h-11 w-11 text-[17px] rounded-full bg-primary text-primary-foreground flex items-center justify-center text-2xl font-bold shadow-md
+                            dark:bg-white dark:text-black">
+              DB
+            </div>
           </div>
 
+          {/* Desktop menu */}
           <div className="hidden md:flex items-center space-x-6">
             {menuItems.map((item) => {
               if (item.label === 'Education') {
@@ -76,6 +98,17 @@ const Header = ({ onCertificationsClick }: HeaderProps) => {
                   <button
                     key={item.id}
                     onClick={handleEducationClick}
+                    className="text-foreground hover:text-primary transition-colors"
+                  >
+                    {item.label}
+                  </button>
+                );
+              }
+              if (item.label === 'Experience') {
+                return (
+                  <button
+                    key={item.id}
+                    onClick={handleExperienceClick}
                     className="text-foreground hover:text-primary transition-colors"
                   >
                     {item.label}
@@ -112,15 +145,6 @@ const Header = ({ onCertificationsClick }: HeaderProps) => {
             </button>
             <ThemeToggle />
           </div>
-
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X /> : <Menu />}
-          </Button>
         </nav>
 
         {isMenuOpen && (

@@ -50,8 +50,9 @@ const CertificationsPage = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-4 w-full text-center font-semibold py-2 px-4 rounded-lg shadow-md 
-                             bg-primary text-white dark:bg-muted dark:text-white 
-                             hover:bg-primary/90 transition-all"
+                             bg-black text-white 
+                             dark:bg-white dark:text-black 
+                             hover:opacity-80 transition-all"
                 >
                   View Certificate
                 </a>

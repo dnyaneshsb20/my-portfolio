@@ -1,74 +1,166 @@
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Link } from 'react-router-dom';
+import { useState } from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { motion, AnimatePresence } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import homepage from "../assets/certificates/homepage.png";
+import carddetails from "../assets/certificates/carddetails.jpg";
+import login from "../assets/certificates/login-page.png";
+import datapackets from "../assets/certificates/data-packet.png";
+import medicloud from "../assets/certificates/MediCloud.png";
 
 const ProjectsSection = () => {
+  const [showComingSoon, setShowComingSoon] = useState(false);
+  const [visibleCount, setVisibleCount] = useState(4); // initially show 4 projects
+  const [expanded, setExpanded] = useState(false);
+
   const projects = [
+    {
+      title: "MediCloud",
+      type: "Web Application",
+      description:
+        "Working on a cloud-based patient record system with role-based access for Patients, Doctors, and Pharmacists, supporting appointments, medical records, prescriptions, and billing with real-time Supabase integration.",
+      link: "/project/medicloud",
+      comingSoon: true,
+      image: medicloud
+    },
     {
       title: "Milk Products Management System",
       type: "Desktop Application",
       description:
-        "I have created a CSharp and MySQL-based Milk Products Management System to help Dairy Shop Owners. It will Easily Calculate Bills, Maintain Records, Reducing Manual Work and Saving Time.",
-      link: "/project/milk-products"
+        "CSharp and MySQL-based Milk Products Management System to help Dairy Shop Owners. It calculates bills, maintains records, reduces manual work, and saves time.",
+      link: "/project/milk-products",
+      image: homepage
     },
     {
       title: "User Authentication System",
       type: "Web Application",
       description:
-        "I have created a Java and Oracle-based User Authentication System to help websites and applications manage user login and registration. Securely verifies user details, stores log-in data, and prevents unauthorized access, making the system safer and more reliable.",
-      link: "/project/userauth"
+        "Java and Oracle-based User Authentication System to manage user login and registration. Securely verifies user details, stores log-in data, and prevents unauthorized access.",
+      link: "/project/userauth",
+      image: login
     },
     {
       title: "Scan and See: Augmented Reality for Instant Data Access",
-      type: "Augmented Reality (AR) | Android & Web Application",
+      type: "AR | Android & Web Application",
       description:
-        "Scan and See is an AR-based app to scan real-world cards and instantly access data. Built with Android Studio and Unity for AR, with a backend powered by Oracle DB for seamless data retrieval.",
-      link: "/project/scan"
+        "Scan and See is an AR app to scan real-world cards and instantly access data. Built with Android Studio and Unity for AR, with Oracle DB backend for seamless data retrieval.",
+      link: "/project/scan",
+      image: carddetails
     },
     {
       title: "Data Packet Flow In Network Layer",
-      type: "Web Application (Simulation and Visualisation)",
+      type: "Web Application (Simulation and Visualization)",
       description:
-        "Created a web-based interactive simulation using HTML, CSS, and JS to visually represent how data packets travel through the network layer. Demonstrates IP packet flow and routing decisions.",
-      link: "/projects/data-packet-flow-in-network-layer/data-packets.html"
+        "Web-based interactive simulation using HTML, CSS, and JS to represent how data packets travel through the network layer. Demonstrates IP packet flow and routing decisions.",
+      link: "https://datapacketflow.vercel.app/",
+      image: datapackets
     }
   ];
 
   return (
-    <section id="projects" className="py-20 bg-secondary/20">
+    <section id="projects" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">MY PROJECTS</h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {projects.map((project, index) => (
-            <Card key={index} className="hover-scale">
-              <CardHeader>
-                <CardTitle className="text-xl font-bold">{project.title}</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="font-semibold">{project.type}</p>
-                <p className="text-justify">{project.description}</p>
-
-                {project.link.endsWith('.html') ? (
-                  <a
-                    href={project.link}
-                    className="text-primary font-semibold hover:underline"
-                  >
-                    <br />View Project
-                  </a>
-                ) : (
-                  <Link
-                    to={project.link}
-                    className="text-primary font-semibold hover:underline"
-                  >
-                    <br />View Project
-                  </Link>
-                )}
-              </CardContent>
-            </Card>
-          ))}
+        <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto items-stretch">
+          <AnimatePresence>
+            {projects.slice(0, expanded ? projects.length : visibleCount).map((project, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -50 }}
+                transition={{ duration: 0.5 }}
+              >
+                <Card className="hover-scale flex flex-col h-full">
+                  <CardHeader>
+                    <CardTitle className="text-xl font-bold">{project.title}</CardTitle>
+                  </CardHeader>
+                  {project.image && (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-48 object-contain rounded-lg shadow-sm"
+                    />
+                  )}
+                  <CardContent className="flex flex-col flex-grow space-y-4 mt-4">
+                    <p className="font-semibold">{project.type}</p>
+                    <p className="text-justify flex-grow">{project.description}</p>
+                    <div className="mt-auto">
+                      {project.comingSoon ? (
+                        <button
+                          onClick={() => setShowComingSoon(true)}
+                          className="px-6 py-2 bg-primary text-white rounded hover:bg-primary/90 dark:bg-white dark:text-black dark:hover:bg-gray-200"
+                        >
+                          View Project
+                        </button>
+                      ) : project.title === "Data Packet Flow In Network Layer" ? (
+                        <Button
+                          asChild
+                          className="px-6 py-2 bg-primary text-white rounded hover:bg-primary/90 dark:bg-white dark:text-black dark:hover:bg-gray-200"
+                        >
+                          <a href={project.link} target="_blank" rel="noopener noreferrer">
+                            View Project
+                          </a>
+                        </Button>
+                      ) : (
+                        <button
+                          onClick={() => (window.location.href = project.link)}
+                          className="px-6 py-2 bg-primary text-white rounded hover:bg-primary/90 dark:bg-white dark:text-black dark:hover:bg-gray-200"
+                        >
+                          View Project
+                        </button>
+                      )}
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </AnimatePresence>
         </div>
+
+        {/* Show More / Show Less Button */}
+        {visibleCount < projects.length && (
+          <div className="col-span-2 text-center mt-4">
+            <button
+              onClick={() => {
+                setExpanded(prev => !prev);
+                setVisibleCount(prev => !prev ? projects.length : 4);
+
+                // Scroll to top of the Projects section when collapsing
+                if (expanded) {
+                  const section = document.getElementById("projects");
+                  if (section) {
+                    section.scrollIntoView({ behavior: "smooth" });
+                  }
+                }
+              }}
+              className="px-6 py-2 bg-primary text-white rounded hover:bg-primary/90 dark:bg-white dark:text-black dark:hover:bg-gray-200"
+            >
+              {expanded ? "Show Less" : "Show More"}
+            </button>
+          </div>
+        )}
+
+        {/* Coming Soon Modal */}
+        {showComingSoon && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg text-center max-w-sm mx-4">
+              <h3 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">Coming Soon!</h3>
+              <p className="mb-6 text-gray-800 dark:text-gray-200">
+                This project is still in progress and will be available soon.
+              </p>
+              <button
+                onClick={() => setShowComingSoon(false)}
+                className="px-6 py-2 bg-primary text-white rounded hover:bg-primary/90 dark:bg-white dark:text-black dark:hover:bg-gray-200"
+              >
+                OK
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
