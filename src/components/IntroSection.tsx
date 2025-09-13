@@ -44,7 +44,7 @@ const IntroSection = () => {
           
           {/* Right side - Photo */}
           <div className="flex justify-center animate-fade-in">
-            <div className="w-96 h-96 md:w-[28rem] md:h-[28rem] rounded-full overflow-hidden shadow-2xl">
+            <div className="w-96 h-96 sm:w-80 sm:h-80 md:w-[28rem] md:h-[28rem] rounded-full overflow-hidden shadow-2xl">
               <img 
                 src={profileImage}
                 alt=""

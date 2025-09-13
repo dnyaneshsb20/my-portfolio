@@ -89,7 +89,7 @@ const SkillsSection = () => {
               </h3>
 
               {/* Skills Grid - Centered */}
-              <div className="flex flex-wrap justify-center gap-10">
+              <div className="grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-10">
                 {category.skills.map((skill, i) => (
                   <div
                     key={i}

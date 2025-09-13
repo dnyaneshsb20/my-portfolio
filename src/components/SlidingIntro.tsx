@@ -11,7 +11,7 @@
     const [showButtons, setShowButtons] = useState(false);
 
     const texts = [
-      "Personal Portfolio",
+      "Personal Website",
       "Welcome I'm Dnyanesh Badave"
     ];
 

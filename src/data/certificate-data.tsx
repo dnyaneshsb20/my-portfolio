@@ -18,6 +18,7 @@ import certImage17 from '../assets/certificates/CSharpIntermediates.jpg'
 import certImage18 from '../assets/certificates/GenAI.png'
 import certImage19 from '../assets/certificates/Responsible-AI.png'
 import certImage20 from '../assets/certificates/Large-Language-Models-GC.png'
+import certImage21 from '../assets/certificates/problem-solving.png'
 
 export const certificates = [
   {
@@ -75,6 +76,13 @@ export const certificates = [
     issueDate: "January 2020",
     url: "https://drive.google.com/file/d/1G4WtOzbiFD_SuRV4Wf2DP3hJ5XTv6clw/view?usp=sharing", 
     image: certImage14,
+  },
+  {
+    title: "Problem-Solving (Basic)",
+    organization: "Hackerrank",
+    issueDate: "September 2025",
+    url: "https://www.hackerrank.com/certificates/7241b3a8c5d4",
+    image: certImage4,
   },
   {
     title: "Python (Basic)",
