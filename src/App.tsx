@@ -22,6 +22,7 @@ import EducationPage from "./pages/EducationPage";
 import ExperiencePage from "./pages/ExperiencePage";
 import PaddleBattle from "./pages/PaddleBattle";
 import CertificationsPage from "./components/CertificationsPage";
+import Achievements from './pages/Achievements';
 import Footer from "@/components/Footer";
 
 const queryClient = new QueryClient();
@@ -57,7 +58,7 @@ const App = () => (
           <div className="flex-grow">                {/* Main content area */}
             <Routes>
               <Route path="/" element={<Index />} />
-              <Route path="/certifications" element={<CertificationsPage onBack={() => window.history.back()} />} />
+              <Route path="/certifications" element={<CertificationsPage />} />
               <Route path="/project/milk-products" element={<MilkProducts />} />
               <Route path="/project/userauth" element={<UserAuthSystem />} />
               <Route path="/project/scan" element={<ScanAndSee />} />
@@ -70,6 +71,7 @@ const App = () => (
               <Route path="/project/pass" element={<PasswordManager />} />
               <Route path="/project/padbat" element={<PaddleBattle />} />
               <Route path="/education" element={<EducationPage />} />
+              <Route path="/achievements" element={<Achievements />} /> 
               <Route path="/experience" element={<ExperiencePage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>

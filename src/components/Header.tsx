@@ -40,6 +40,11 @@ const Header = ({ onCertificationsClick }: HeaderProps) => {
     setIsMenuOpen(false);
   };
 
+  const handleAchievementsClick = () => {
+    navigate('/achievements');
+    setIsMenuOpen(false);
+  };
+
   const handleViewResume = () => {
     window.open('https://drive.google.com/file/d/1XA1d1afEPHvgS46yDTz19HiUbYJ5PGRl/view?usp=sharing', '_blank');
     setIsMenuOpen(false);
@@ -48,7 +53,7 @@ const Header = ({ onCertificationsClick }: HeaderProps) => {
   const handleDownloadResume = () => {
     const link = document.createElement('a');
     link.href = 'https://drive.google.com/uc?export=download&id=1XA1d1afEPHvgS46yDTz19HiUbYJ5PGRl';
-    link.download = 'Dnyanesh_Santosh_Badave.pdf'; // This name works for local files, Drive ignores it
+    link.download = 'Dnyanesh_Santosh_Badave.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -69,7 +74,7 @@ const Header = ({ onCertificationsClick }: HeaderProps) => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
       <div className="container mx-auto px-4 py-4">
         <nav className="flex items-center justify-between">
-          {/* Mobile hamburger button (before logo on left side) */}
+          {/* Mobile hamburger button */}
           <Button
             variant="ghost"
             size="icon"
@@ -95,13 +100,24 @@ const Header = ({ onCertificationsClick }: HeaderProps) => {
             {menuItems.map((item) => {
               if (item.label === 'Education') {
                 return (
-                  <button
-                    key={item.id}
-                    onClick={handleEducationClick}
-                    className="text-foreground hover:text-primary transition-colors"
-                  >
-                    {item.label}
-                  </button>
+                  <>
+                    <button
+                      key={item.id}
+                      onClick={handleEducationClick}
+                      className="text-foreground hover:text-primary transition-colors"
+                    >
+                      {item.label}
+                    </button>
+
+                    {/* 👇 Add Achievements right after Education */}
+                    <button
+                      key="achievements"
+                      onClick={handleAchievementsClick}
+                      className="text-foreground hover:text-primary transition-colors"
+                    >
+                      Achievements
+                    </button>
+                  </>
                 );
               }
               if (item.label === 'Experience') {
@@ -147,26 +163,38 @@ const Header = ({ onCertificationsClick }: HeaderProps) => {
           </div>
         </nav>
 
+        {/* Mobile menu */}
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4 border-t">
             <div className="flex flex-col space-y-4 pt-4">
               {menuItems.map((item) => {
                 if (item.label === 'Education') {
                   return (
-                    <button
-                      key={item.id}
-                      onClick={handleEducationClick}
-                      className="text-left text-foreground hover:text-primary transition-colors"
-                    >
-                      {item.label}
-                    </button>
+                    <>
+                      <button
+                        key={item.id}
+                        onClick={handleEducationClick}
+                        className="text-left text-foreground hover:text-primary transition-colors"
+                      >
+                        {item.label}
+                      </button>
+
+                      {/* 👇 Add Achievements right after Education */}
+                      <button
+                        key="achievements-mobile"
+                        onClick={handleAchievementsClick}
+                        className="text-left text-foreground hover:text-primary transition-colors"
+                      >
+                        Achievements
+                      </button>
+                    </>
                   );
                 }
                 if (item.label === 'Experience') {
                   return (
                     <button
                       key={item.id}
-                      onClick={handleExperienceClick} // <-- use handleExperienceClick here
+                      onClick={handleExperienceClick}
                       className="text-left text-foreground hover:text-primary transition-colors"
                     >
                       {item.label}
