@@ -4,10 +4,11 @@ import Footer from '@/components/Footer';
 import img1 from '../assets/certificates/h1.jpg';
 import img2 from '../assets/certificates/h2.jpg';
 import img3 from '../assets/certificates/h3.jpg';
+import img4 from '../assets/certificates/h4.jpg';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Achievements = () => {
-    const images = [img3, img2, img1];
+    const images = [img1, img4, img2, img3];
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const prevImage = () => {
@@ -80,7 +81,7 @@ const Achievements = () => {
                                 Our team, <strong>Code Pirates</strong>, won First Prize in the TATA MOTORS Hackathon under MindSpark’25 – The Quantum Nexus.
                             </li>
                             <li>
-                                Awarded Trophy, Certificates, Cash Prize ₹20,000, and Best Project Certificates from TATA MOTORS.
+                                Awarded Trophy, Certificates, and Best Project Certificates from TATA MOTORS.
                             </li>
                             <li>
                                 Strengthened teamwork, innovation, and problem-solving skills while delivering impactful real-world solutions.

@@ -93,7 +93,7 @@ export default function ExperiencePage() {
             <p className="text-sm">
               {exp.duration} • {exp.startDate && calculateExperience(exp.startDate, exp.endDate)}
             </p>
-            <p className="mt-2">{exp.description}</p>
+            <p className="mt-2 text-justify">{exp.description}</p>
           </div>
         </div>
       </Card>
