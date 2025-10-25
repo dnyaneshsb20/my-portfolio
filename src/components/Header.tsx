@@ -46,13 +46,13 @@ const Header = ({ onCertificationsClick }: HeaderProps) => {
   };
 
   const handleViewResume = () => {
-    window.open('https://drive.google.com/file/d/1XA1d1afEPHvgS46yDTz19HiUbYJ5PGRl/view?usp=sharing', '_blank');
+    window.open('https://drive.google.com/file/d/1F1F8DQ9IEabRCIoiiferoCTQd82xDJM8/view?usp=sharing', '_blank');
     setIsMenuOpen(false);
   };
 
   const handleDownloadResume = () => {
     const link = document.createElement('a');
-    link.href = 'https://drive.google.com/uc?export=download&id=1XA1d1afEPHvgS46yDTz19HiUbYJ5PGRl';
+    link.href = 'https://drive.google.com/uc?export=download&id=1F1F8DQ9IEabRCIoiiferoCTQd82xDJM8';
     link.download = 'Dnyanesh_Santosh_Badave.pdf';
     document.body.appendChild(link);
     link.click();
