@@ -21,6 +21,7 @@ import certImage20 from '../assets/certificates/Large-Language-Models-GC.png'
 import certImage21 from '../assets/certificates/problem-solving.png'
 import certImage22 from '../assets/certificates/hackathon.jpg'
 import certImage23 from '../assets/certificates/matpo.jpg'
+import certImage24 from '../assets/certificates/javascript.jpg'
 
 export const certificates = [
   {
@@ -45,11 +46,11 @@ export const certificates = [
     image: certImage2,
   },
   {
-    title: "CPP Training",
+    title: "JavaScript Training",
     organization: "Spoken Tutorial, IIT Bombay",
-    issueDate: "November 2024",
-    url: "https://drive.google.com/file/d/1ef2mAYs5Sgw7KeA1k1V1P14OO6trjkGq/view?usp=sharing",
-    image: certImage3,
+    issueDate: "October 2025",
+    url: "https://drive.google.com/file/d/1zQy5bAs6goHaD8LNh38kVp-YTYLC85tn/view?usp=drive_link",
+    image: certImage24,
   },
   {
     title: "Introduction to Generative AI",
@@ -71,6 +72,34 @@ export const certificates = [
     issueDate: "August 2025",
     url: "https://www.cloudskillsboost.google/public_profiles/22dbd1ec-cbf8-43cf-9f1c-70be70b26436/badges/17525785",
     image: certImage20,
+  },
+  {
+    title: "CPP Training",
+    organization: "Spoken Tutorial, IIT Bombay",
+    issueDate: "November 2024",
+    url: "https://drive.google.com/file/d/1ef2mAYs5Sgw7KeA1k1V1P14OO6trjkGq/view?usp=sharing",
+    image: certImage3,
+  },
+  {
+    title: "React JS",
+    organization: "Mind Luster",
+    issueDate: "November 2024",
+    url: "https://www.mindluster.com/student/certificate/9ee4b9fe",
+    image: certImage8,
+  },
+  {
+    title: "IP Awareness/Training Program",
+    organization: "Intellectual Property Office, India",
+    issueDate: "May 2025",
+    url: "https://drive.google.com/file/d/1UaK4aGNY1xfZ9p54AStU7OfAH5DnSOTY/view?usp=sharing",
+    image: certImage13
+  },
+  {
+    title: "MaTPO Aptitude Idol – 2025 (Participation)",
+    organization: "Maha Association of Training & Placement Officers (MaTPO)",
+    issueDate: "October 2025",
+    url: "https://drive.google.com/file/d/1bJq2QuC-DhHU_tMurwG14a_VbSqN3chy/view?usp=drive_link",
+    image: certImage23,
   },
   {
     title: "Course on Computer Concepts (C.C.C.)",
@@ -163,26 +192,4 @@ export const certificates = [
     url: "https://www.udemy.com/certificate/UC-690b0bc8-22be-4364-852b-89705adca272/",
     image: certImage17,
   },
-  {
-    title: "React JS",
-    organization: "Mind Luster",
-    issueDate: "November 2024",
-    url: "https://www.mindluster.com/student/certificate/9ee4b9fe",
-    image: certImage8,
-  },
-  {
-    title: "IP Awareness/Training Program",
-    organization: "Intellectual Property Office, India",
-    issueDate: "May 2025",
-    url: "https://drive.google.com/file/d/1UaK4aGNY1xfZ9p54AStU7OfAH5DnSOTY/view?usp=sharing",
-    image: certImage13
-  },
-  {
-    title: "MaTPO Aptitude Idol – 2025 (Participation)",
-    organization: "Maha Association of Training & Placement Officers (MaTPO)",
-    issueDate: "October 2025",
-    url: "https://drive.google.com/file/d/1bJq2QuC-DhHU_tMurwG14a_VbSqN3chy/view?usp=drive_link",
-    image: certImage23,
-  },
-
 ];
