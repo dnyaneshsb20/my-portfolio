@@ -7,6 +7,8 @@ import carddetails from "../assets/certificates/carddetails.jpg";
 import login from "../assets/certificates/login-page.png";
 import datapackets from "../assets/certificates/data-packet.png";
 import medicloud from "../assets/certificates/MediCloud.png";
+import HB from "../assets/certificates/HB.png"
+import hackathon from "../assets/certificates/hackathon.jpeg"
 
 const ProjectsSection = () => {
   const [showComingSoon, setShowComingSoon] = useState(false);
@@ -14,6 +16,24 @@ const ProjectsSection = () => {
   const [expanded, setExpanded] = useState(false);
 
   const projects = [
+    {
+      title: "AI-Powered Assembly Verification System",
+      type: "Hackathon Project | Computer Vision + AI",
+      description:
+        "Built for the COEP Mindspark TATA Motors Hackathon, this AI-powered assembly verification system uses Vision-Language Models (VLLMs) and YOLOv8 to analyze manufacturing assembly videos, detect missing or incorrect steps, and generate real-time verification reports with visual proof. The system reduces manual inspection effort by up to 80% and improves product quality consistency.",
+      link: "/project/assembly",
+      comingSoon: false,
+      image: hackathon
+    },
+    {
+      title: "Heritage Bites",
+      type: "Web Application | Research Project",
+      description:
+        "A personalized recipe recommendation and cultural food exploration platform. Heritage Bites helps users discover regional recipes, save favorites, and track preferences through AI-powered suggestions and community sharing.",
+      link: "https://heritage-bites.vercel.app/",
+      comingSoon: false,
+      image: HB
+    },
     {
       title: "MediCloud",
       type: "Web Application",

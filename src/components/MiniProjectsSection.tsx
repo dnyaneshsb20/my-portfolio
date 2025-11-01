@@ -9,12 +9,21 @@ import quizImg from "../assets/certificates/quiz1.png";
 import workImg from "../assets/certificates/work2.png";
 import passImg from "../assets/certificates/PasswordManager-GUI.png";
 import paddleImg from "../assets/certificates/Paddle1.png";
+import medi from "../assets/certificates/medi5.jpg"
 
 const MiniProjectsSection = () => {
   const [showComingSoon, setShowComingSoon] = useState(false);
   const [visibleCount, setVisibleCount] = useState(4); // initially show 4 projects
   const [expanded, setExpanded] = useState(false);
   const miniProjects = [
+    {
+      title: "Medical Billing Analyzer",
+      type: "Data Science & Visualization Project",
+      description:
+        "MediCloud – Medical Billing Analyzer is a data-driven Streamlit app that analyzes hospital billing data to provide insights like total revenue, most treated symptoms, doctor-wise performance, and patient demographics using Python, Pandas, and Matplotlib.",
+      link: "/medicalbill",
+      image:medi,
+    },
     {
       title: "Clap Switch",
       type: "Smart Home IoT Based – Clap Switch",

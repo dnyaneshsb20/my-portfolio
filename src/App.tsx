@@ -24,6 +24,8 @@ import PaddleBattle from "./pages/PaddleBattle";
 import CertificationsPage from "./components/CertificationsPage";
 import Achievements from './pages/Achievements';
 import Footer from "@/components/Footer";
+import AssemblyVerification from "../src/pages/AssemblyVerification"
+import MedicalBillingAnalyzer from "./pages/MedicalBillAnalyzer";
 
 const queryClient = new QueryClient();
 
@@ -73,6 +75,8 @@ const App = () => (
               <Route path="/education" element={<EducationPage />} />
               <Route path="/achievements" element={<Achievements />} /> 
               <Route path="/experience" element={<ExperiencePage />} />
+              <Route path="/project/assembly" element={<AssemblyVerification/>}/>
+              <Route path="/medicalbill" element={<MedicalBillingAnalyzer/>}/>
               <Route path="*" element={<NotFound />} />
             </Routes>
           </div>
