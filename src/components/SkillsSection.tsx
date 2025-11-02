@@ -1,4 +1,4 @@
-import { DiVisualstudio, DiMsqlServer } from "react-icons/di";
+import { DiVisualstudio, DiMsqlServer, DiJavascript } from "react-icons/di";
 import { Card, CardContent } from '@/components/ui/card';
 import { FaJava } from "react-icons/fa6";
 import pythonLogo from "../assets/certificates/python-logo.png";
@@ -28,7 +28,7 @@ const SkillsSection = () => {
       skills: [
         { name: "HTML", icon: <SiHtml5 className="text-orange-600" /> },
         { name: "CSS", icon: <SiCss3 className="text-blue-600" /> },
-        { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
+        { name: "JavaScript", icon: <DiJavascript className="text-yellow-400" /> },
         { name: "ReactJS", icon: <SiReact className="text-cyan-400" /> },
         { name: "Tailwind CSS", icon: <SiTailwindcss color="#38B2AC" />},
         { name: "C#", icon: <SiDotnet className="text-purple-600" /> },
