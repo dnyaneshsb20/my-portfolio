@@ -9,6 +9,7 @@ import datapackets from "../assets/certificates/data-packet.png";
 import medicloud from "../assets/certificates/MediCloud.png";
 import HB from "../assets/certificates/HB.png"
 import hackathon from "../assets/certificates/hackathon.jpeg"
+import smart from "../assets/certificates/smart.png"
 
 const ProjectsSection = () => {
   const [showComingSoon, setShowComingSoon] = useState(false);
@@ -33,6 +34,15 @@ const ProjectsSection = () => {
       link: "https://heritage-bites.vercel.app/",
       comingSoon: false,
       image: HB
+    },
+    {
+      title: "QR Docs",
+      type: "Full-Stack Project | AI + Document Intelligence",
+      description:
+        "QR Docs is an AI-driven document management system that enables intelligent parsing, summarization, and querying of PDFs and text files. It integrates OCR, NLP, and retrieval-augmented generation to turn unstructured data into searchable, analyzable knowledge. Designed for research and enterprise use, it supports instant Q&A, schema mapping, and cross-document insights.",
+      link: "/project/qrdocs",
+      comingSoon: true,
+      image: smart,
     },
     {
       title: "MediCloud",

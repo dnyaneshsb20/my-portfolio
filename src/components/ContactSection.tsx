@@ -4,7 +4,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Mail, Github } from 'lucide-react';
-import { SiInstagram, SiHackerrank, SiX, SiLinkedin } from 'react-icons/si';
+import { SiInstagram, SiHackerrank, SiX, SiLinkedin, SiGmail  } from 'react-icons/si';
 import { useState } from 'react';
 
 const ContactSection = () => {
@@ -61,7 +61,7 @@ const ContactSection = () => {
                 className="flex items-center gap-4 hover:opacity-80 transition-opacity"
               >
                 <div className="p-3 bg-primary/10 rounded-lg">
-                  <Mail className="w-6 h-6 text-primary" />
+                  <SiGmail className="w-6 h-6 text-[#EA4335]" />
                 </div>
                 <div>
                   <h4 className="font-medium">Email</h4>
@@ -75,7 +75,7 @@ const ContactSection = () => {
                 className="flex items-center gap-4 hover:opacity-80 transition-opacity"
               >
                 <div className="p-3 bg-primary/10 rounded-lg">
-                  <SiLinkedin className="w-6 h-6 text-primary" />
+                  <SiLinkedin className="w-6 h-6 text-primary text-[#0A66C2]" />
                 </div>
                 <div>
                   <h4 className="font-medium">LinkedIn</h4>
@@ -90,7 +90,7 @@ const ContactSection = () => {
                 className="flex items-center gap-4 hover:opacity-80 transition-opacity"
               >
                 <div className="p-3 bg-primary/10 rounded-lg">
-                  <SiHackerrank className="w-6 h-6 text-primary" />
+                  <SiHackerrank className="w-6 h-6 text-[#32C766]" />
                 </div>
                 <div>
                   <h4 className="font-medium">HackerRank</h4>
@@ -105,7 +105,7 @@ const ContactSection = () => {
                 className="flex items-center gap-4 hover:opacity-80 transition-opacity"
               >
                 <div className="p-3 bg-primary/10 rounded-lg">
-                  <Github className="w-6 h-6 text-primary" />
+                  <Github className="w-6 h-6 text-[#181717]" />
                 </div>
                 <div>
                   <h4 className="font-medium">GitHub</h4>
@@ -120,7 +120,7 @@ const ContactSection = () => {
                 className="flex items-center gap-4 hover:opacity-80 transition-opacity"
               >
                 <div className="p-3 bg-primary/10 rounded-lg">
-                  <SiInstagram className="w-6 h-6 text-primary" />
+                  <SiInstagram className="w-6 h-6 text-[#E4405F]" />
                 </div>
                 <div>
                   <h4 className="font-medium">Instagram</h4>
