@@ -5,10 +5,11 @@ import img1 from '../assets/certificates/h1.jpg';
 import img2 from '../assets/certificates/h2.jpg';
 import img3 from '../assets/certificates/h3.jpg';
 import img4 from '../assets/certificates/h4.jpg';
+import img5 from '../assets/certificates/h5.jpg';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Achievements = () => {
-    const images = [img1, img4, img2, img3];
+    const images = [img5, img1, img4, img2, img3];
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const prevImage = () => {
