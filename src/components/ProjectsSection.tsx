@@ -10,13 +10,23 @@ import medicloud from "../assets/certificates/MediCloud.png";
 import HB from "../assets/certificates/HB.png"
 import hackathon from "../assets/certificates/hackathon.jpeg"
 import smart from "../assets/certificates/smart.png"
+import campusz from "../assets/certificates/campusz.png"
 
 const ProjectsSection = () => {
   const [showComingSoon, setShowComingSoon] = useState(false);
-  const [visibleCount, setVisibleCount] = useState(4); // initially show 4 projects
+  const [visibleCount, setVisibleCount] = useState(4); 
   const [expanded, setExpanded] = useState(false);
 
   const projects = [
+    {
+      title: "Campus Z – Smart Campus Ecosystem",
+      type: "Full-Stack Web Application | Smart India Hackathon (SIH) Project",
+      description:
+        "Campus Z is a next-generation campus management ecosystem that unifies academics, administration, student services, and campus operations into a single smart digital platform. It includes smart attendance, centralized student profiles, grievance tracking, events hub, timetable automation, hostel & transport management, and an analytics dashboard for faculty and management. Designed for efficiency, transparency, and complete campus digital transformation.",
+      link: "/project/campusz",
+      comingSoon: false,
+      image: campusz 
+    },
     {
       title: "AI-Powered Assembly Verification System",
       type: "Hackathon Project | Computer Vision + AI",

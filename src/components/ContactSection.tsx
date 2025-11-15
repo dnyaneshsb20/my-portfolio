@@ -75,7 +75,7 @@ const ContactSection = () => {
                 className="flex items-center gap-4 hover:opacity-80 transition-opacity"
               >
                 <div className="p-3 bg-primary/10 rounded-lg">
-                  <SiLinkedin className="w-6 h-6 text-primary text-[#0A66C2]" />
+                  <SiLinkedin className="w-6 h-6 text-[#0A66DF]" />
                 </div>
                 <div>
                   <h4 className="font-medium">LinkedIn</h4>

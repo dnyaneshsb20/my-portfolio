@@ -26,6 +26,7 @@ import Achievements from './pages/Achievements';
 import Footer from "@/components/Footer";
 import AssemblyVerification from "../src/pages/AssemblyVerification"
 import MedicalBillingAnalyzer from "./pages/MedicalBillAnalyzer";
+import CampusZ from "./pages/CampusZ";
 
 const queryClient = new QueryClient();
 
@@ -64,6 +65,7 @@ const App = () => (
               <Route path="/project/milk-products" element={<MilkProducts />} />
               <Route path="/project/userauth" element={<UserAuthSystem />} />
               <Route path="/project/scan" element={<ScanAndSee />} />
+              <Route path="/project/campusz" element={<CampusZ/>}/>
               <Route path="/project/clap" element={<ClapSwitch />} />
               <Route path="/project/todo" element={<ToDoList />} />
               <Route path="/project/turtle" element={<TurtleCrossingGame />} />
