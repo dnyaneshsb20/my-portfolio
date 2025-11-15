@@ -21,7 +21,7 @@ const AboutSection = () => {
   // ✅ Extra-Curricular Activities
   const extraCurricular = [
     <li key={1}><strong>Winner – COEP MindSpark’25 TATA Motors Hackathon 2025</strong>: Secured 1st place by developing a real-time assembly process verification system using Vision LLMs, YOLOv8, and Streamlit, showcasing innovation and teamwork in solving industrial challenges.</li>,
-    <li key={2}>Participated in <strong>IDEATHON 2.0</strong>, organized by <strong>Nutan Incubation Centre (NMIET)</strong>, focusing on AI for Everyday Life under themes like Education, Safety, and Digital Transformation, gaining hands-on experience in creative problem-solving and idea presentation.</li>,
+    <li key={2}>Participated in <strong>IDEATHON 2.0</strong>, organized by <strong>NUTAN MAHARASHTRA INSTITUTE OF ENGINEERING & TECHNOLOGY (NMIET)</strong>, focusing on AI for Everyday Life under themes like Education, Safety, and Digital Transformation, gaining hands-on experience in creative problem-solving and idea presentation.</li>,
     <li key={3}>Participated in <strong>MaTPO Aptitude Idol – 2025</strong>, organized by the <strong>Maha Association of Training & Placement Officers (MaTPO)</strong>, which enhanced my logical reasoning and problem-solving abilities through aptitude-based challenges.</li>,
     <li key={4}>Worked as a <strong>Technical Team Member</strong> during the <strong>SAN Pratibha Shodh 2024 Competition</strong>, helping manage technical tasks and event support.</li>,
   ];
