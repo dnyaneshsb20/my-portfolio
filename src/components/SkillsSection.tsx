@@ -1,3 +1,4 @@
+import React from "react";  
 import { DiVisualstudio, DiMsqlServer, DiJavascript, DiNetbeans } from "react-icons/di";
 import { Card, CardContent } from '@/components/ui/card';
 import { FaJava } from "react-icons/fa6";
@@ -94,7 +95,7 @@ const SkillsSection = () => {
                       key={i}
                       className="flex flex-col items-center justify-center space-y-2 hover:scale-110 transition-transform duration-300 w-28"
                     >
-                      <span className="text-5xl">{skill.icon}</span>
+                      <span className="text-5xl text-black dark:text-white">{skill.icon}</span>
                       <span className="text-md font-medium">{skill.name}</span>
                     </div>
                   ))}
