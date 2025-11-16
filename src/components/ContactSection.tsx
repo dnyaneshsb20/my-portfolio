@@ -60,7 +60,7 @@ const ContactSection = () => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 hover:opacity-80 transition-opacity"
               >
-                <div className="p-3 bg-primary/10 rounded-lg">
+                <div className="p-3 bg-primary/10 rounded-lg dark:bg-white">
                   <SiGmail className="w-6 h-6 text-[#EA4335]" />
                 </div>
                 <div>
@@ -74,7 +74,7 @@ const ContactSection = () => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 hover:opacity-80 transition-opacity"
               >
-                <div className="p-3 bg-primary/10 rounded-lg">
+                <div className="p-3 bg-primary/10 rounded-lg dark:bg-white">
                   <SiLinkedin className="w-6 h-6 text-[#0A66DF]" />
                 </div>
                 <div>
@@ -89,7 +89,7 @@ const ContactSection = () => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 hover:opacity-80 transition-opacity"
               >
-                <div className="p-3 bg-primary/10 rounded-lg">
+                <div className="p-3 bg-primary/10 rounded-lg dark:bg-white">
                   <SiHackerrank className="w-6 h-6 text-[#32C766]" />
                 </div>
                 <div>
@@ -104,7 +104,7 @@ const ContactSection = () => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 hover:opacity-80 transition-opacity"
               >
-                <div className="p-3 bg-primary/10 rounded-lg">
+                <div className="p-3 bg-primary/10 rounded-lg dark:bg-white">
                   <Github className="w-6 h-6 text-[#181717]" />
                 </div>
                 <div>
@@ -119,7 +119,7 @@ const ContactSection = () => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 hover:opacity-80 transition-opacity"
               >
-                <div className="p-3 bg-primary/10 rounded-lg">
+                <div className="p-3 bg-primary/10 rounded-lg dark:bg-white">
                   <SiInstagram className="w-6 h-6 text-[#E4405F]" />
                 </div>
                 <div>
@@ -134,8 +134,8 @@ const ContactSection = () => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 hover:opacity-80 transition-opacity"
               >
-                <div className="p-3 bg-primary/10 rounded-lg">
-                  <SiX className="w-6 h-6 text-primary" />
+                <div className="p-3 bg-primary/10 rounded-lg dark:bg-white">
+                  <SiX className="w-6 h-6 text-black" />
                 </div>
                 <div>
                   <h4 className="font-medium">X (Twitter)</h4>
