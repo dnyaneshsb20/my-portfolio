@@ -23,7 +23,8 @@ const AboutSection = () => {
     <li key={1}><strong>Winner – COEP MindSpark’25 TATA Motors Hackathon 2025</strong>: Secured 1st place by developing a real-time assembly process verification system using Vision LLMs, YOLOv8, and Streamlit, showcasing innovation and teamwork in solving industrial challenges.</li>,
     <li key={2}>Participated in <strong>IDEATHON 2.0</strong>, organized by <strong>NUTAN MAHARASHTRA INSTITUTE OF ENGINEERING & TECHNOLOGY (NMIET)</strong>, focusing on AI for Everyday Life under themes like Education, Safety, and Digital Transformation, gaining hands-on experience in creative problem-solving and idea presentation.</li>,
     <li key={3}>Participated in <strong>MaTPO Aptitude Idol – 2025</strong>, organized by the <strong>Maha Association of Training & Placement Officers (MaTPO)</strong>, which enhanced my logical reasoning and problem-solving abilities through aptitude-based challenges.</li>,
-    <li key={4}>Worked as a <strong>Technical Team Member</strong> during the <strong>SAN Pratibha Shodh 2024 Competition</strong>, helping manage technical tasks and event support.</li>,
+    <li key={4}>Participated in <strong>HP Power Lab 2.0</strong>, organized by <strong>Hindustan Petroleum Corporation Limited (HPCL)</strong>, focusing on developing innovative and practical solutions across themes such as Renewable & Green Energy, Digital Transformation, Sales Analytics, Maritime Logistics, and Circular Economy Innovation, gaining valuable exposure to real-world industry challenges and enhancing creative problem-solving skills.</li>,
+    <li key={5}>Worked as a <strong>Technical Team Member</strong> during the <strong>SAN Pratibha Shodh 2024 Competition</strong>, helping manage technical tasks and event support.</li>,
   ];
 
   return (
@@ -81,7 +82,7 @@ const AboutSection = () => {
           <Card className="flex flex-col rounded-2xl shadow-lg border border-gray-200">
             <CardContent className="p-8 text-justify">
               <h3 className="text-2xl font-bold text-primary mb-6 text-center">Extra-Curricular Activities</h3>
-              <ul className="list-disc list-outside text-foreground space-y-3" ref={extraRef}>
+              <ul className="list-disc list-outside text-foreground space-y-3 pl-6" ref={extraRef}>
                 {extraCurricular.slice(0, showAllExtra ? extraCurricular.length : 3)}
               </ul>
               <div className="text-center mt-4">
@@ -104,7 +105,7 @@ const AboutSection = () => {
           <Card className="flex flex-col rounded-2xl shadow-lg border border-gray-200">
             <CardContent className="p-8 text-justify">
               <h3 className="text-2xl font-bold text-primary mb-6 text-center">Co-Curricular Activities</h3>
-              <ul className="list-disc list-outside text-foreground space-y-3" ref={coRef}>
+              <ul className="list-disc list-outside text-foreground space-y-3 pl-6" ref={coRef}>
                 {coCurricular.slice(0, showAllCo ? coCurricular.length : 3)}
               </ul>
               <div className="text-center mt-4">
