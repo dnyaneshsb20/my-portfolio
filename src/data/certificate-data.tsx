@@ -205,7 +205,7 @@ export const certificates = [
     title: "Advanced Excel",
     organization: "Mind Luster",
     issueDate: "January 2024",
-    url: "https://www.mindluster.com",
+    url: "https://www.mindluster.com/student/certificate/15935058903",
     image: certImage26,
   }
 ];
