@@ -22,6 +22,8 @@ import certImage21 from '../assets/certificates/problem-solving.png'
 import certImage22 from '../assets/certificates/hackathon.jpg'
 import certImage23 from '../assets/certificates/matpo.jpg'
 import certImage24 from '../assets/certificates/javascript.jpg'
+import certImage25 from '../assets/certificates/hp.jpg'
+import certImage26 from '../assets/certificates/advanced-excel.jpg'
 
 export const certificates = [
   {
@@ -88,14 +90,14 @@ export const certificates = [
     image: certImage8,
   },
   {
-    title: "IP Awareness/Training Program",
-    organization: "Intellectual Property Office, India",
-    issueDate: "May 2025",
-    url: "https://drive.google.com/file/d/1UaK4aGNY1xfZ9p54AStU7OfAH5DnSOTY/view?usp=sharing",
-    image: certImage13
+    title: "HP Power Lab 2.0 – Certificate of Participation",
+    organization: "Hindustan Petroleum Corporation Ltd.",
+    issueDate: "November 2025",
+    url: "https://unstop.com/certificate-preview/10aae1be-2c9d-4dbd-a291-80eed7ed2352",
+    image: certImage25,
   },
   {
-    title: "MaTPO Aptitude Idol – 2025 (Participation)",
+    title: "MaTPO Aptitude Idol – 2025 (Certificate of Participation)",
     organization: "Maha Association of Training & Placement Officers (MaTPO)",
     issueDate: "October 2025",
     url: "https://drive.google.com/file/d/1bJq2QuC-DhHU_tMurwG14a_VbSqN3chy/view?usp=drive_link",
@@ -192,4 +194,18 @@ export const certificates = [
     url: "https://www.udemy.com/certificate/UC-690b0bc8-22be-4364-852b-89705adca272/",
     image: certImage17,
   },
+  {
+    title: "IP Awareness/Training Program",
+    organization: "Intellectual Property Office, India",
+    issueDate: "May 2025",
+    url: "https://drive.google.com/file/d/1UaK4aGNY1xfZ9p54AStU7OfAH5DnSOTY/view?usp=sharing",
+    image: certImage13
+  },
+  {
+    title: "Advanced Excel",
+    organization: "Mind Luster",
+    issueDate: "January 2024",
+    url: "https://www.mindluster.com",
+    image: certImage26,
+  }
 ];
