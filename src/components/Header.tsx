@@ -1,9 +1,13 @@
 import { useState } from 'react';
+import React from "react";
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Menu, X } from 'lucide-react';
+import { BadgeCheck, Boxes, Briefcase, Download, FileText, FolderKanban, GraduationCap, Mail, Menu, Sparkles, Trophy, User, X } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 import logo from "../assets/certificates/favicon.png";
+import Achievements from '@/pages/Achievements';
+import { MdContacts } from "react-icons/md";
+import { IoBookSharp } from "react-icons/io5";
 
 interface HeaderProps {
   onCertificationsClick: () => void;
@@ -67,6 +71,8 @@ const Header = ({ onCertificationsClick }: HeaderProps) => {
     { label: 'Mini Projects', id: 'mini-projects' },
     { label: 'Experience', id: 'experience' },
     { label: 'Education', id: 'edu' },
+    { label: 'Achievements', id: 'ach' },
+    // { id: "publications", label: "Publications" },
     { label: 'Contact', id: 'contact' },
   ];
 
@@ -96,71 +102,185 @@ const Header = ({ onCertificationsClick }: HeaderProps) => {
           </div>
 
           {/* Desktop menu */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden md:flex items-center space-x-4">
             {menuItems.map((item) => {
-              if (item.label === 'Education') {
-                return (
-                  <>
-                    <button
-                      key={item.id}
-                      onClick={handleEducationClick}
-                      className="text-foreground hover:text-primary transition-colors"
-                    >
-                      {item.label}
-                    </button>
+              const iconMap: any = {
+                About: <User />,
+                Skills: <Sparkles />,
+                Projects: <FolderKanban />,
+                "Mini Projects": <Boxes />,
+                Experience: <Briefcase />,
+                Education: <GraduationCap />,
+                Achievements: <Trophy />,
+                // Publications: <IoBookSharp />, 
+                Contact: <MdContacts />,
+              };
 
-                    {/* 👇 Add Achievements right after Education */}
+              // Education
+              if (item.label === "Education") {
+                return (
+                  <React.Fragment key="education-achievements">
                     <button
-                      key="achievements"
-                      onClick={handleAchievementsClick}
-                      className="text-foreground hover:text-primary transition-colors"
+                      onClick={handleEducationClick}
+                      className="group flex items-center overflow-hidden rounded-xl bg-transparent border border-muted/20 px-3 py-2
+            transition-all duration-300 ease-in-out hover:bg-primary hover:text-white hover:w-32 w-12
+            dark:hover:bg-white"
                     >
-                      Achievements
+                      <span className="flex-shrink-0">
+                        {React.cloneElement(iconMap[item.label], {
+                          className:
+                            "text-black dark:text-white group-hover:text-white dark:group-hover:text-black transition-colors duration-300"
+                        })}
+                      </span>
+                      <span
+                        className="ml-3 opacity-0 group-hover:opacity-100 whitespace-nowrap 
+              transform translate-x-3 group-hover:translate-x-0 transition-all duration-300 text-white dark:text-black"
+                      >
+                        {item.label}
+                      </span>
                     </button>
-                  </>
+                  </React.Fragment>
                 );
               }
-              if (item.label === 'Experience') {
+
+              // Achievements
+              if (item.label === "Achievements") {
                 return (
                   <button
-                    key={item.id}
-                    onClick={handleExperienceClick}
-                    className="text-foreground hover:text-primary transition-colors"
+                    onClick={handleAchievementsClick}
+                    className="group flex items-center overflow-hidden rounded-xl bg-transparent border border-muted/20 px-3 py-2
+          transition-all duration-300 ease-in-out hover:bg-black hover:text-white hover:w-40 w-12
+          dark:hover:bg-white"
                   >
-                    {item.label}
+                    <span className="flex-shrink-0">
+                      {React.cloneElement(iconMap[item.label], {
+                        className:
+                          "text-black dark:text-white group-hover:text-white dark:group-hover:text-black transition-colors duration-300"
+                      })}
+                    </span>
+                    <span
+                      className="ml-3 opacity-0 group-hover:opacity-100 whitespace-nowrap 
+              transform translate-x-3 group-hover:translate-x-0 transition-all duration-300 text-white dark:text-black"
+                    >
+                      {item.label}
+                    </span>
                   </button>
                 );
               }
+
+              // Experience
+              if (item.label === "Experience") {
+                return (
+                  <button
+                    onClick={handleExperienceClick}
+                    className="group flex items-center overflow-hidden rounded-xl bg-transparent border border-muted/20 px-3 py-2
+          transition-all duration-300 ease-in-out hover:bg-primary hover:text-white hover:w-[135px] w-12
+          dark:hover:bg-white"
+                  >
+                    <span className="flex-shrink-0">
+                      {React.cloneElement(iconMap[item.label], {
+                        className:
+                          "text-black dark:text-white group-hover:text-white dark:group-hover:text-black transition-colors duration-300"
+                      })}
+                    </span>
+                    <span
+                      className="ml-3 opacity-0 group-hover:opacity-100 whitespace-nowrap 
+              transform translate-x-3 group-hover:translate-x-0 transition-all duration-300 text-white dark:text-black"
+                    >
+                      {item.label}
+                    </span>
+                  </button>
+                );
+              }
+
+              // All other menu items
               return (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-foreground hover:text-primary transition-colors"
+                  className="group flex items-center hover:justify-center overflow-hidden rounded-xl bg-transparent border border-muted/20 px-3 py-2
+        transition-all duration-300 ease-in-out hover:bg-primary hover:text-white hover:w-36 w-12
+        dark:hover:bg-white"
                 >
-                  {item.label}
+                  <span className="flex-shrink-0">
+                    {React.cloneElement(iconMap[item.label], {
+                      className:
+                        "text-black dark:text-white group-hover:text-white dark:group-hover:text-black transition-colors duration-300"
+                    })}
+                  </span>
+                  <span
+                    className="ml-3 opacity-0 group-hover:opacity-100 whitespace-nowrap 
+          transform translate-x-3 group-hover:translate-x-0 transition-all duration-300 text-white dark:text-black"
+                  >
+                    {item.label}
+                  </span>
                 </button>
               );
             })}
+
+            {/* Certifications */}
             <button
               onClick={handleCertificationsClick}
-              className="text-foreground hover:text-primary transition-colors"
+              className="group flex items-center hover:justify-center overflow-hidden rounded-xl bg-transparent border border-muted/20 px-3 py-2
+      transition-all duration-300 ease-in-out hover:bg-primary hover:text-white hover:w-44 w-12 dark:hover:bg-white"
             >
-              Certifications
+              <span className="flex-shrink-0">
+                {React.cloneElement(<BadgeCheck className="w-5 h-5" />, {
+                  className:
+                    "text-black dark:text-white group-hover:text-white dark:group-hover:text-black transition-colors duration-300"
+                })}
+              </span>
+              <span
+                className="ml-3 opacity-0 group-hover:opacity-100 whitespace-nowrap 
+      transform translate-x-3 group-hover:translate-x-0 transition-all duration-300 text-white dark:text-black"
+              >
+                Certifications
+              </span>
             </button>
+
+            {/* My Resume */}
             <button
               onClick={handleViewResume}
-              className="text-foreground hover:text-primary transition-colors"
+              className="group flex items-center hover:justify-center overflow-hidden rounded-xl bg-transparent border border-muted/20 px-3 py-2
+      transition-all duration-300 ease-in-out hover:bg-primary hover:text-white hover:w-40 w-12 dark:hover:bg-white"
             >
-              My Resume
+              <span className="flex-shrink-0">
+                {React.cloneElement(<FileText className="w-5 h-5" />, {
+                  className:
+                    "text-black dark:text-white group-hover:text-white dark:group-hover:text-black transition-colors duration-300"
+                })}
+              </span>
+              <span
+                className="ml-3 opacity-0 group-hover:opacity-100 whitespace-nowrap 
+      transform translate-x-3 group-hover:translate-x-0 transition-all duration-300 text-white dark:text-black"
+              >
+                My Resume
+              </span>
             </button>
+
+            {/* Download Resume */}
             <button
               onClick={handleDownloadResume}
-              className="text-foreground hover:text-primary transition-colors"
+              className="group flex items-center hover:justify-center overflow-hidden rounded-xl border border-muted/20 px-3 py-2
+      transition-all duration-300 ease-in-out hover:bg-primary hover:text-white hover:w-52 w-12 dark:hover:bg-white"
             >
-              Download Resume
+              <span className="flex-shrink-0">
+                {React.cloneElement(<Download className="w-5 h-5" />, {
+                  className:
+                    "text-black dark:text-white group-hover:text-white dark:group-hover:text-black transition-colors duration-300"
+                })}
+              </span>
+              <span
+                className="ml-3 opacity-0 group-hover:opacity-100 whitespace-nowrap 
+      transform translate-x-3 group-hover:translate-x-0 transition-all duration-300 text-white dark:text-black"
+              >
+                Download Resume
+              </span>
             </button>
+
             <ThemeToggle />
           </div>
+
         </nav>
 
         {/* Mobile menu */}
