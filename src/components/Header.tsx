@@ -44,6 +44,11 @@ const Header = ({ onCertificationsClick }: HeaderProps) => {
     setIsMenuOpen(false);
   };
 
+  const handlePublicationsClick = () => {
+    navigate('/publications');
+    setIsMenuOpen(false);
+  };
+
   const handleAchievementsClick = () => {
     navigate('/achievements');
     setIsMenuOpen(false);
@@ -72,7 +77,7 @@ const Header = ({ onCertificationsClick }: HeaderProps) => {
     { label: 'Experience', id: 'experience' },
     { label: 'Education', id: 'edu' },
     { label: 'Achievements', id: 'ach' },
-    // { id: "publications", label: "Publications" },
+    { id: "publications", label: "Publications" },
     { label: 'Contact', id: 'contact' },
   ];
 
@@ -112,7 +117,7 @@ const Header = ({ onCertificationsClick }: HeaderProps) => {
                 Experience: <Briefcase />,
                 Education: <GraduationCap />,
                 Achievements: <Trophy />,
-                // Publications: <IoBookSharp />, 
+                Publications: <IoBookSharp />,
                 Contact: <MdContacts />,
               };
 
@@ -140,6 +145,32 @@ const Header = ({ onCertificationsClick }: HeaderProps) => {
                       </span>
                     </button>
                   </React.Fragment>
+                );
+              }
+
+              // Publications
+              if (item.label === "Publications") {
+                return (
+                  <button
+                    key="publications-desktop"
+                    onClick={handlePublicationsClick}
+                    className="group flex items-center hover:justify-center overflow-hidden rounded-xl bg-transparent border border-muted/20 px-3 py-2
+      transition-all duration-300 ease-in-out hover:bg-primary hover:text-white hover:w-44 w-12
+      dark:hover:bg-white"
+                  >
+                    <span className="flex-shrink-0">
+                      {React.cloneElement(<IoBookSharp />, {
+                        className:
+                          "text-black dark:text-white group-hover:text-white dark:group-hover:text-black transition-colors duration-300"
+                      })}
+                    </span>
+                    <span
+                      className="ml-3 opacity-0 group-hover:opacity-100 whitespace-nowrap 
+        transform translate-x-3 group-hover:translate-x-0 transition-all duration-300 text-white dark:text-black"
+                    >
+                      Publications
+                    </span>
+                  </button>
                 );
               }
 
@@ -321,6 +352,18 @@ const Header = ({ onCertificationsClick }: HeaderProps) => {
                     </button>
                   );
                 }
+                if (item.label === "Publications") {
+                  return (
+                    <button
+                      key={item.id}
+                      onClick={handlePublicationsClick}
+                      className="text-left text-foreground hover:text-primary transition-colors"
+                    >
+                      {item.label}
+                    </button>
+                  );
+                }
+
                 return (
                   <button
                     key={item.id}

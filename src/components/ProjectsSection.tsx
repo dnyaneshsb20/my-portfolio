@@ -122,7 +122,7 @@ const ProjectsSection = () => {
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-48 object-contain rounded-lg shadow-sm"
+                      className="w-98 h-48 object-contain rounded-lg shadow-sm mx-1 px-4 md:px-0"
                     />
                   )}
                   <CardContent className="flex flex-col flex-grow space-y-4 mt-4">

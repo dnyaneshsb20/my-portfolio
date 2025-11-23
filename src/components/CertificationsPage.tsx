@@ -37,7 +37,7 @@ const CertificationsPage = () => {
               <div className="flex flex-col items-center gap-2 flex-grow w-full">
                 <img
                   src={cert.image}
-                  alt={`${cert.name} certificate`}
+                  alt={`${cert.title} certificate`}
                   className="w-full max-h-64 object-contain rounded-lg shadow-sm"
                 />
                 <h2 className="text-lg font-bold text-center text-foreground dark:text-white">{cert.title}</h2>

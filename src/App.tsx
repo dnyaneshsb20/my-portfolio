@@ -27,6 +27,7 @@ import Footer from "@/components/Footer";
 import AssemblyVerification from "../src/pages/AssemblyVerification"
 import MedicalBillingAnalyzer from "./pages/MedicalBillAnalyzer";
 import CampusZ from "./pages/CampusZ";
+import Publications from "./pages/Publications";
 
 const queryClient = new QueryClient();
 
@@ -77,6 +78,7 @@ const App = () => (
               <Route path="/education" element={<EducationPage />} />
               <Route path="/achievements" element={<Achievements />} /> 
               <Route path="/experience" element={<ExperiencePage />} />
+              <Route path="/publications" element={<Publications/>}/>
               <Route path="/project/assembly" element={<AssemblyVerification/>}/>
               <Route path="/medicalbill" element={<MedicalBillingAnalyzer/>}/>
               <Route path="*" element={<NotFound />} />

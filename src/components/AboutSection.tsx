@@ -22,9 +22,11 @@ const AboutSection = () => {
   const extraCurricular = [
     <li key={1}><strong>Winner – COEP MindSpark’25 TATA Motors Hackathon 2025</strong>: Secured 1st place by developing a real-time assembly process verification system using Vision LLMs, YOLOv8, and Streamlit, showcasing innovation and teamwork in solving industrial challenges.</li>,
     <li key={2}>Participated in <strong>IDEATHON 2.0</strong>, organized by <strong>NUTAN MAHARASHTRA INSTITUTE OF ENGINEERING & TECHNOLOGY (NMIET)</strong>, focusing on AI for Everyday Life under themes like Education, Safety, and Digital Transformation, gaining hands-on experience in creative problem-solving and idea presentation.</li>,
-    <li key={3}>Participated in <strong>MaTPO Aptitude Idol – 2025</strong>, organized by the <strong>Maha Association of Training & Placement Officers (MaTPO)</strong>, which enhanced my logical reasoning and problem-solving abilities through aptitude-based challenges.</li>,
-    <li key={4}>Participated in <strong>HP Power Lab 2.0</strong>, organized by <strong>Hindustan Petroleum Corporation Limited (HPCL)</strong>, focusing on developing innovative and practical solutions across themes such as Renewable & Green Energy, Digital Transformation, Sales Analytics, Maritime Logistics, and Circular Economy Innovation, gaining valuable exposure to real-world industry challenges and enhancing creative problem-solving skills.</li>,
-    <li key={5}>Worked as a <strong>Technical Team Member</strong> during the <strong>SAN Pratibha Shodh 2024 Competition</strong>, helping manage technical tasks and event support.</li>,
+    <li key={3}>Participated in the <strong>Odoo X SPIT Hackathon 2025</strong>, a 9-hour national coding Hackathon focused on real-time problem-solving, innovation, and teamwork, gaining hands-on experience in building dynamic, responsive applications, handling surprise problem statements, and applying practical development skills under time-bound pressure.</li>,
+    <li key={4}>Participated in <strong>EY Techathon 6.0</strong>, one of India’s leading national innovation challenges, centered around the theme of <strong>Agentic AI</strong> to develop autonomous, goal-driven digital solutions, gaining valuable experience in innovation, problem-solving, and technology-driven solution design.</li>,
+    <li key={5}>Participated in <strong>HP Power Lab 2.0</strong>, organized by <strong>Hindustan Petroleum Corporation Limited (HPCL)</strong>, focusing on developing innovative and practical solutions across themes such as Renewable & Green Energy, Digital Transformation, Sales Analytics, Maritime Logistics, and Circular Economy Innovation, gaining valuable exposure to real-world industry challenges and enhancing creative problem-solving skills.</li>,
+    <li key={6}>Participated in <strong>MaTPO Aptitude Idol – 2025</strong>, organized by the <strong>Maha Association of Training & Placement Officers (MaTPO)</strong>, which enhanced my logical reasoning and problem-solving abilities through aptitude-based challenges.</li>,
+    <li key={7}>Worked as a <strong>Technical Team Member</strong> during the <strong>SAN Pratibha Shodh 2024 Competition</strong>, helping manage technical tasks and event support.</li>,
   ];
 
   return (
@@ -36,7 +38,7 @@ const AboutSection = () => {
 
         {/* Row 1: Who I Am | What Drives Me | Hobbies */}
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-8">
-          <Card className="flex flex-col rounded-2xl shadow-lg border border-gray-200">
+          <Card className="flex flex-col rounded-2xl shadow-lg">
             <CardContent className="p-8 flex-1 text-center">
               <h3 className="text-2xl font-bold text-primary mb-6">Who I Am</h3>
               <ul className="list-disc list-inside space-y-3 text-left max-w-md mx-auto">
@@ -49,7 +51,7 @@ const AboutSection = () => {
             </CardContent>
           </Card>
 
-          <Card className="flex flex-col rounded-2xl shadow-lg border border-gray-200">
+          <Card className="flex flex-col rounded-2xl shadow-lg">
             <CardContent className="p-8 flex-1 text-center">
               <h3 className="text-2xl font-bold text-primary mb-6">What Drives Me</h3>
               <ul className="list-disc list-inside space-y-3 text-left max-w-md mx-auto">
@@ -62,7 +64,7 @@ const AboutSection = () => {
             </CardContent>
           </Card>
 
-          <Card className="flex flex-col rounded-2xl shadow-lg border border-gray-200">
+          <Card className="flex flex-col rounded-2xl shadow-lg">
             <CardContent className="p-8 flex-1 text-center">
               <h3 className="text-2xl font-bold text-primary mb-6">Hobbies</h3>
               <ul className="list-disc list-inside space-y-3 text-left max-w-md mx-auto">
@@ -79,7 +81,7 @@ const AboutSection = () => {
         {/* Row 2: Learning Beyond the Academics */}
         <div className="max-w-7xl mx-auto flex flex-col gap-8">
           {/* ✅ Extra-Curricular */}
-          <Card className="flex flex-col rounded-2xl shadow-lg border border-gray-200">
+          <Card className="flex flex-col rounded-2xl shadow-lg">
             <CardContent className="p-8 text-justify">
               <h3 className="text-2xl font-bold text-primary mb-6 text-center">Extra-Curricular Activities</h3>
               <ul className="list-disc list-outside text-foreground space-y-3 pl-6" ref={extraRef}>
@@ -102,7 +104,7 @@ const AboutSection = () => {
           </Card>
 
           {/* ✅ Co-Curricular */}
-          <Card className="flex flex-col rounded-2xl shadow-lg border border-gray-200">
+          <Card className="flex flex-col rounded-2xl shadow-lg">
             <CardContent className="p-8 text-justify">
               <h3 className="text-2xl font-bold text-primary mb-6 text-center">Co-Curricular Activities</h3>
               <ul className="list-disc list-outside text-foreground space-y-3 pl-6" ref={coRef}>

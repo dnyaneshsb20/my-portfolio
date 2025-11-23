@@ -24,6 +24,8 @@ import certImage23 from '../assets/certificates/matpo.jpg'
 import certImage24 from '../assets/certificates/javascript.jpg'
 import certImage25 from '../assets/certificates/hp.jpg'
 import certImage26 from '../assets/certificates/advanced-excel.jpg'
+import certImage27 from '../assets/certificates/accept.png'
+import certImage28 from '../assets/certificates/research.png'
 
 export const certificates = [
   {
@@ -207,5 +209,20 @@ export const certificates = [
     issueDate: "January 2024",
     url: "https://www.mindluster.com/student/certificate/15935058903",
     image: certImage26,
+  },
+  {
+    title: "HeritageBites: Certificate of Acceptance",
+    organization: "International Journal of Scientific Research in Engineering & Management (IJSREM)",
+    issueDate: "November 2025",
+    url: "https://ijsrem.com/download/heritagebites-a-socio-technical-approach-for-promoting-indigenous-food-systems/",
+    image: certImage27,
+  },
+  {
+    title: "HeritageBites: Certificate of Publication",
+    organization: "International Journal of Scientific Research in Engineering & Management (IJSREM)",
+    issueDate: "November 2025",
+    url: "https://ijsrem.com/download/heritagebites-a-socio-technical-approach-for-promoting-indigenous-food-systems/",
+    image: certImage28,
   }
+
 ];
