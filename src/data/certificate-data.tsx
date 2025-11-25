@@ -26,6 +26,7 @@ import certImage25 from '../assets/certificates/hp.jpg'
 import certImage26 from '../assets/certificates/advanced-excel.jpg'
 import certImage27 from '../assets/certificates/accept.png'
 import certImage28 from '../assets/certificates/research.png'
+import certImage29 from '../assets/certificates/Cloud-Computing.jpeg'
 
 export const certificates = [
   {
@@ -43,11 +44,11 @@ export const certificates = [
     image: certImage22,
   },
   {
-    title: "Java Training",
-    organization: "Spoken Tutorial, IIT Bombay",
-    issueDate: "April 2025",
-    url: "https://drive.google.com/file/d/14ICOdc0nOB0KJnzEovSaB_Y-mixKNld-/view?usp=sharing",
-    image: certImage2,
+    title: "Cloud Computing",
+    organization: "NPTEL, IIT Kharagpur",
+    issueDate: "November 2025",
+    url: "https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL25CS107S36920010710473815",
+    image: certImage29,
   },
   {
     title: "JavaScript Training",
@@ -55,6 +56,34 @@ export const certificates = [
     issueDate: "October 2025",
     url: "https://drive.google.com/file/d/1zQy5bAs6goHaD8LNh38kVp-YTYLC85tn/view?usp=drive_link",
     image: certImage24,
+  },
+  {
+    title: "Java Training",
+    organization: "Spoken Tutorial, IIT Bombay",
+    issueDate: "April 2025",
+    url: "https://drive.google.com/file/d/14ICOdc0nOB0KJnzEovSaB_Y-mixKNld-/view?usp=sharing",
+    image: certImage2,
+  },
+  {
+    title: "CPP Training",
+    organization: "Spoken Tutorial, IIT Bombay",
+    issueDate: "November 2024",
+    url: "https://drive.google.com/file/d/1ef2mAYs5Sgw7KeA1k1V1P14OO6trjkGq/view?usp=sharing",
+    image: certImage3,
+  },
+  {
+    title: "HP Power Lab 2.0 – Certificate of Participation",
+    organization: "Hindustan Petroleum Corporation Ltd.",
+    issueDate: "November 2025",
+    url: "https://unstop.com/certificate-preview/10aae1be-2c9d-4dbd-a291-80eed7ed2352",
+    image: certImage25,
+  },
+  {
+    title: "MaTPO Aptitude Idol – 2025 (Certificate of Participation)",
+    organization: "Maha Association of Training & Placement Officers (MaTPO)",
+    issueDate: "October 2025",
+    url: "https://drive.google.com/file/d/1bJq2QuC-DhHU_tMurwG14a_VbSqN3chy/view?usp=drive_link",
+    image: certImage23,
   },
   {
     title: "Introduction to Generative AI",
@@ -76,34 +105,6 @@ export const certificates = [
     issueDate: "August 2025",
     url: "https://www.cloudskillsboost.google/public_profiles/22dbd1ec-cbf8-43cf-9f1c-70be70b26436/badges/17525785",
     image: certImage20,
-  },
-  {
-    title: "CPP Training",
-    organization: "Spoken Tutorial, IIT Bombay",
-    issueDate: "November 2024",
-    url: "https://drive.google.com/file/d/1ef2mAYs5Sgw7KeA1k1V1P14OO6trjkGq/view?usp=sharing",
-    image: certImage3,
-  },
-  {
-    title: "React JS",
-    organization: "Mind Luster",
-    issueDate: "November 2024",
-    url: "https://www.mindluster.com/student/certificate/9ee4b9fe",
-    image: certImage8,
-  },
-  {
-    title: "HP Power Lab 2.0 – Certificate of Participation",
-    organization: "Hindustan Petroleum Corporation Ltd.",
-    issueDate: "November 2025",
-    url: "https://unstop.com/certificate-preview/10aae1be-2c9d-4dbd-a291-80eed7ed2352",
-    image: certImage25,
-  },
-  {
-    title: "MaTPO Aptitude Idol – 2025 (Certificate of Participation)",
-    organization: "Maha Association of Training & Placement Officers (MaTPO)",
-    issueDate: "October 2025",
-    url: "https://drive.google.com/file/d/1bJq2QuC-DhHU_tMurwG14a_VbSqN3chy/view?usp=drive_link",
-    image: certImage23,
   },
   {
     title: "Course on Computer Concepts (C.C.C.)",
@@ -162,6 +163,13 @@ export const certificates = [
     image: certImage10,
   },
   {
+    title: "React JS",
+    organization: "Mind Luster",
+    issueDate: "November 2024",
+    url: "https://www.mindluster.com/student/certificate/9ee4b9fe",
+    image: certImage8,
+  },
+  {
     title: "Java Programming",
     organization: "Udemy",
     issueDate: "Feburary 2025",
@@ -211,18 +219,17 @@ export const certificates = [
     image: certImage26,
   },
   {
-    title: "HeritageBites: Certificate of Acceptance",
-    organization: "International Journal of Scientific Research in Engineering & Management (IJSREM)",
-    issueDate: "November 2025",
-    url: "https://ijsrem.com/download/heritagebites-a-socio-technical-approach-for-promoting-indigenous-food-systems/",
-    image: certImage27,
-  },
-  {
     title: "HeritageBites: Certificate of Publication",
     organization: "International Journal of Scientific Research in Engineering & Management (IJSREM)",
     issueDate: "November 2025",
-    url: "https://ijsrem.com/download/heritagebites-a-socio-technical-approach-for-promoting-indigenous-food-systems/",
+    url: "https://drive.google.com/file/d/1p7g71yJiAjp4AX4kmxZjg2Oy-jripc04/view?usp=sharing",
     image: certImage28,
-  }
-
+  },
+  {
+    title: "HeritageBites: Certificate of Acceptance",
+    organization: "International Journal of Scientific Research in Engineering & Management (IJSREM)",
+    issueDate: "November 2025",
+    url: "https://drive.google.com/file/d/1Db5nkXTKykKdANLAIKnOeh6C5y8LnO6s/view?usp=sharing",
+    image: certImage27,
+  },
 ];
