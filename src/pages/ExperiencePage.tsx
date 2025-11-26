@@ -13,6 +13,7 @@ export default function ExperiencePage() {
     window.scrollTo(0, 0);
   }, []);
 
+  // Keeping the function (not used now) — you said don't touch other things
   const calculateExperience = (startDateStr: string, endDateStr?: string) => {
     const startDate = new Date(startDateStr);
     const endDate = endDateStr ? new Date(endDateStr) : new Date();
@@ -27,8 +28,9 @@ export default function ExperiencePage() {
       return months === 1 ? `1 month` : `${months} months`;
     } else {
       if (months === 0) return years === 1 ? `1 yr` : `${years} yrs`;
-      return years === 1 ? `1 yr ${months} month${months > 1 ? 's' : ''}` 
-                         : `${years} yrs ${months} month${months > 1 ? 's' : ''}`;
+      return years === 1
+        ? `1 yr ${months} month${months > 1 ? 's' : ''}`
+        : `${years} yrs ${months} month${months > 1 ? 's' : ''}`;
     }
   };
 
@@ -36,22 +38,21 @@ export default function ExperiencePage() {
     {
       id: 1,
       logo: mu,
-      role: "Full Stack Developer",
+      role: "Full Stack Developer-Intern",
       company: "Media Urbana",
-      startDate: "2025-08-18", 
-      endDate: "", 
-      duration: "August 2025-Present",
+      startDate: "2025-08-25",
+      endDate: "2025-11-25",
+      duration: "Aug 2025 - Nov 2025",
       type: "Internship",
-      description: "Built engaging and mobile-friendly web interfaces using HTML5, CSS3, JavaScript, and Tailwind. Ensured responsive layouts and modern design principles for consistent appearance across all devices, while mainly focusing on frontend development and occasionally contributing to backend functionality."
+      description:
+        "Built engaging and mobile-friendly web interfaces using HTML5, CSS3, JavaScript, and Tailwind. Ensured responsive layouts and modern design principles for consistent appearance across all devices, while mainly focusing on frontend development and occasionally contributing to backend functionality."
     }
   ];
 
   return (
     <div className="flex flex-col min-h-screen bg-background text-foreground">
-      {/* Header */}
       <Header onCertificationsClick={() => {}} />
 
-      {/* Main content fills space */}
       <main className="flex-1 flex flex-col">
         <div className="container mx-auto px-4 pb-10 flex-1">
           <div className="mb-8 mt-28">
@@ -61,6 +62,7 @@ export default function ExperiencePage() {
                 Back to Portfolio
               </Button>
             </Link>
+
             <div className="text-center">
               <h1 className="text-4xl font-bold mb-4">WORK EXPERIENCE</h1>
             </div>
@@ -68,43 +70,47 @@ export default function ExperiencePage() {
 
           {/* Timeline */}
           <div className="space-y-8">
-  {experienceList.map((exp) => (
-    <div key={exp.id} className="relative flex items-start">
-      {/* Card */}
-      <Card className="relative w-full max-w-5xl mx-auto p-5 bg-white dark:bg-zinc-800 shadow-md rounded-lg">
-        {/* Timeline Line */}
-        <div className="hidden lg:block absolute -left-6 top-0 h-full border-l border-primary dark:border-white/30"></div>
+            {experienceList.map((exp) => (
+              <div key={exp.id} className="relative flex items-start">
+                <Card className="relative w-full max-w-5xl mx-auto p-5 bg-white dark:bg-zinc-800 shadow-md rounded-lg">
 
-        {/* Timeline Circle */}
-        <div className="hidden lg:block absolute -left-9 top-6 w-6 h-6 rounded-full bg-primary dark:bg-white border-2 border-white dark:border-black"></div>
+                  {/* Timeline Line */}
+                  <div className="hidden lg:block absolute -left-6 top-0 h-full border-l border-primary dark:border-white/30"></div>
 
-        <div className="flex flex-col md:flex-row md:items-center gap-4">
-          <div className="flex justify-center w-full md:w-auto">
-            <img
-              src={exp.logo}
-              alt={exp.company}
-              className="w-40 md:w-[15%] md:min-w-[150px] h-40 md:h-auto object-contain rounded"
-            />
+                  {/* Timeline Circle */}
+                  <div className="hidden lg:block absolute -left-9 top-6 w-6 h-6 rounded-full bg-primary dark:bg-white border-2 border-white dark:border-black"></div>
+
+                  <div className="flex flex-col md:flex-row md:items-center gap-4">
+                    <div className="flex justify-center w-full md:w-auto">
+                      <img
+                        src={exp.logo}
+                        alt={exp.company}
+                        className="w-40 md:w-[15%] md:min-w-[150px] h-40 md:h-auto object-contain rounded"
+                      />
+                    </div>
+
+                    {/* Text */}
+                    <div className="space-y-1 text-justify md:text-left w-full">
+                      <h3 className="text-2xl font-semibold">{exp.role}</h3>
+                      <p className="text-md font-medium">
+                        {exp.company} • {exp.type}
+                      </p>
+
+                      {/* FIXED 3-MONTH DURATION */}
+                      <p className="text-sm">
+                        {exp.duration} • 3 months
+                      </p>
+
+                      <p className="mt-2 text-justify">{exp.description}</p>
+                    </div>
+                  </div>
+                </Card>
+              </div>
+            ))}
           </div>
-          {/* Text */}
-          <div className="space-y-1 text-justify md:text-left w-full">
-            <h3 className="text-2xl font-semibold">{exp.role}</h3>
-            <p className="text-md font-medium">{exp.company} • {exp.type}</p>
-            <p className="text-sm">
-              {exp.duration} • {exp.startDate && calculateExperience(exp.startDate, exp.endDate)}
-            </p>
-            <p className="mt-2 text-justify">{exp.description}</p>
-          </div>
-        </div>
-      </Card>
-    </div>
-  ))}
-</div>
-
         </div>
       </main>
 
-      {/* Footer always at bottom */}
       <Footer />
     </div>
   );
