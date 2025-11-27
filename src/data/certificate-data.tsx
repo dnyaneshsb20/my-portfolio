@@ -75,7 +75,7 @@ export const certificates = [
     title: "HP Power Lab 2.0 – Certificate of Participation",
     organization: "Hindustan Petroleum Corporation Ltd.",
     issueDate: "November 2025",
-    url: "https://unstop.com/certificate-preview/10aae1be-2c9d-4dbd-a291-80eed7ed2352",
+    url: "https://drive.google.com/file/d/1Tqugl1UKqkzQLLJonxPqKJu7QR1sSzrd/view?usp=sharing",
     image: certImage25,
   },
   {
