@@ -27,6 +27,8 @@ import certImage26 from '../assets/certificates/advanced-excel.jpg'
 import certImage27 from '../assets/certificates/accept.png'
 import certImage28 from '../assets/certificates/research.png'
 import certImage29 from '../assets/certificates/Cloud-Computing.jpeg'
+import certImage30 from '../assets/certificates/Hackathon-Certificate.jpg'
+import certImage31 from '../assets/certificates/Udemy-Complete-JAVASCRIPT-with HTML5,CSS3-from-zero-to-Expert-2025.jpg'
 
 export const certificates = [
   {
@@ -42,6 +44,13 @@ export const certificates = [
     issueDate: "October 2025",
     url: "https://drive.google.com/file/d/1cK2-rpKSqFTw6c-UCB0k3rNyfjfCDMV4/view?usp=drive_link",
     image: certImage22,
+  },
+  {
+    title: "Proof of Concept – Assembly Verification Using VLLMs",
+    organization: "TATA Motors",
+    issueDate: "December 2025",
+    url: "https://drive.google.com/file/d/1OiCut5BFFXZ8BsnhXxhqlvKJgvPS13AP/view?usp=sharing",
+    image: certImage30,
   },
   {
     title: "Cloud Computing",
@@ -114,6 +123,27 @@ export const certificates = [
     image: certImage14,
   },
   {
+    title: "React JS",
+    organization: "Mind Luster",
+    issueDate: "November 2024",
+    url: "https://www.mindluster.com/student/certificate/9ee4b9fe",
+    image: certImage8,
+  },
+  {
+    title: "HeritageBites: Certificate of Publication",
+    organization: "International Journal of Scientific Research in Engineering & Management (IJSREM)",
+    issueDate: "November 2025",
+    url: "https://drive.google.com/file/d/1p7g71yJiAjp4AX4kmxZjg2Oy-jripc04/view?usp=sharing",
+    image: certImage28,
+  },
+  {
+    title: "HeritageBites: Certificate of Acceptance",
+    organization: "International Journal of Scientific Research in Engineering & Management (IJSREM)",
+    issueDate: "November 2025",
+    url: "https://drive.google.com/file/d/1Db5nkXTKykKdANLAIKnOeh6C5y8LnO6s/view?usp=sharing",
+    image: certImage27,
+  },
+  {
     title: "Problem-Solving (Basic)",
     organization: "Hackerrank",
     issueDate: "September 2025",
@@ -163,13 +193,6 @@ export const certificates = [
     image: certImage10,
   },
   {
-    title: "React JS",
-    organization: "Mind Luster",
-    issueDate: "November 2024",
-    url: "https://www.mindluster.com/student/certificate/9ee4b9fe",
-    image: certImage8,
-  },
-  {
     title: "Java Programming",
     organization: "Udemy",
     issueDate: "Feburary 2025",
@@ -205,6 +228,13 @@ export const certificates = [
     image: certImage17,
   },
   {
+    title: "Complete JavaScript with HTML5, CSS3 from Zero to Expert – 2025",
+    organization: "Udemy",
+    issueDate: "October 2025",
+    url: "https://www.udemy.com/certificate/UC-3433dda5-0a32-4f81-9200-cbe4a7d26430/",
+    image: certImage31,
+  },
+  {
     title: "IP Awareness/Training Program",
     organization: "Intellectual Property Office, India",
     issueDate: "May 2025",
@@ -217,19 +247,5 @@ export const certificates = [
     issueDate: "January 2024",
     url: "https://www.mindluster.com/student/certificate/15935058903",
     image: certImage26,
-  },
-  {
-    title: "HeritageBites: Certificate of Publication",
-    organization: "International Journal of Scientific Research in Engineering & Management (IJSREM)",
-    issueDate: "November 2025",
-    url: "https://drive.google.com/file/d/1p7g71yJiAjp4AX4kmxZjg2Oy-jripc04/view?usp=sharing",
-    image: certImage28,
-  },
-  {
-    title: "HeritageBites: Certificate of Acceptance",
-    organization: "International Journal of Scientific Research in Engineering & Management (IJSREM)",
-    issueDate: "November 2025",
-    url: "https://drive.google.com/file/d/1Db5nkXTKykKdANLAIKnOeh6C5y8LnO6s/view?usp=sharing",
-    image: certImage27,
   },
 ];
