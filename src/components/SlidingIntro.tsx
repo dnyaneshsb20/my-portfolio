@@ -11,8 +11,8 @@
     const [showButtons, setShowButtons] = useState(false);
 
     const texts = [
-      "Personal Website",
-      "Welcome I'm Dnyanesh Badave"
+      "Hi! I'm Dnyanesh Badave",
+      "Welcome to My Personal Website"
     ];
 
     useEffect(() => {

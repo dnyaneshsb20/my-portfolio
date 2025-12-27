@@ -65,7 +65,7 @@ export default function EducationPage() {
       <Header onCertificationsClick={() => {}} />
 
       <div className="container mx-auto px-4 pb-10">
-        <div className="mb-8 mt-28">
+        <div className="mb-8 mt-24">
           <Link to="/#intro" state={{ scrollTo: 'intro' }}>
             <Button variant="ghost" className="mb-4">
               <ArrowLeft className="w-4 h-4 mr-2" />

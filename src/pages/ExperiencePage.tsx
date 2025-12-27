@@ -5,7 +5,7 @@ import { ArrowLeft } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Link } from 'react-router-dom';
-
+import tm from '../assets/certificates/TATA-Motors.jpeg'
 import mu from "../assets/certificates/mu-logo.png";
 
 export default function ExperiencePage() {
@@ -16,7 +16,16 @@ export default function ExperiencePage() {
   // Keeping the function (not used now) — you said don't touch other things
   const calculateExperience = (startDateStr: string, endDateStr?: string) => {
     const startDate = new Date(startDateStr);
-    const endDate = endDateStr ? new Date(endDateStr) : new Date();
+    const today = new Date();
+    const endDate = endDateStr ? new Date(endDateStr) : today;
+
+    // Display string: e.g., "Dec 2025 - Present"
+    const options: Intl.DateTimeFormatOptions = { month: 'short', year: 'numeric' };
+    const startStr = startDate.toLocaleDateString('en-US', options);
+    const endStr = endDateStr ? endDate.toLocaleDateString('en-US', options) : 'Present';
+
+    // Only calculate duration if start date is in the past
+    if (startDate > today) return `${startStr} - ${endStr}`;
 
     let totalMonths = (endDate.getFullYear() - startDate.getFullYear()) * 12;
     totalMonths += endDate.getMonth() - startDate.getMonth();
@@ -24,19 +33,29 @@ export default function ExperiencePage() {
     const years = Math.floor(totalMonths / 12);
     const months = totalMonths % 12;
 
-    if (years === 0) {
-      return months === 1 ? `1 month` : `${months} months`;
-    } else {
-      if (months === 0) return years === 1 ? `1 yr` : `${years} yrs`;
-      return years === 1
-        ? `1 yr ${months} month${months > 1 ? 's' : ''}`
-        : `${years} yrs ${months} month${months > 1 ? 's' : ''}`;
-    }
+    let durationStr = '';
+    if (years > 0) durationStr += years === 1 ? '1 yr' : `${years} yrs`;
+    if (months > 0) durationStr += (years > 0 ? ' ' : '') + (months === 1 ? '1 month' : `${months} months`);
+    if (durationStr === '') durationStr = 'Less than a month';
+
+    return `${startStr} - ${endStr} • ${durationStr}`;
   };
 
   const experienceList = [
     {
       id: 1,
+      logo: tm,
+      role: "Software Engineering-Intern",
+      company: "TATA Motors",
+      startDate: "2025-12-16",
+      // endDate: "2026-06-16",
+      duration: "Dec 2025 - Present",
+      type: "Internship",
+      description:
+        "Excited to work on real-world software engineering tasks like data processing, visualization, and AI integration. I will collaborate with senior team members to understand industry workflows and contribute to ongoing projects. This internship will provide hands-on experience in building and integrating software solutions."
+    },
+    {
+      id: 2,
       logo: mu,
       role: "Full Stack Developer-Intern",
       company: "Media Urbana",
@@ -51,11 +70,11 @@ export default function ExperiencePage() {
 
   return (
     <div className="flex flex-col min-h-screen bg-background text-foreground">
-      <Header onCertificationsClick={() => {}} />
+      <Header onCertificationsClick={() => { }} />
 
       <main className="flex-1 flex flex-col">
         <div className="container mx-auto px-4 pb-10 flex-1">
-          <div className="mb-8 mt-28">
+          <div className="mb-8 mt-24">
             <Link to="/#intro" state={{ scrollTo: 'intro' }}>
               <Button variant="ghost" className="mb-4">
                 <ArrowLeft className="w-4 h-4 mr-2" />
@@ -69,16 +88,16 @@ export default function ExperiencePage() {
           </div>
 
           {/* Timeline */}
-          <div className="space-y-8">
+          <div className="space-y-8 relative">
+            {/* Timeline Line */}
+            <div className="hidden lg:block absolute left-[148px] top-0 h-full border-l-2 border-primary dark:border-white"></div>
+
             {experienceList.map((exp) => (
               <div key={exp.id} className="relative flex items-start">
                 <Card className="relative w-full max-w-5xl mx-auto p-5 bg-white dark:bg-zinc-800 shadow-md rounded-lg">
 
-                  {/* Timeline Line */}
-                  <div className="hidden lg:block absolute -left-6 top-0 h-full border-l border-primary dark:border-white/30"></div>
-
                   {/* Timeline Circle */}
-                  <div className="hidden lg:block absolute -left-9 top-6 w-6 h-6 rounded-full bg-primary dark:bg-white border-2 border-white dark:border-black"></div>
+                  <div className="hidden lg:block absolute -left-9 top-7 w-6 h-6 rounded-full bg-primary dark:bg-white border-2 border-white dark:border-black"></div>
 
                   <div className="flex flex-col md:flex-row md:items-center gap-4">
                     <div className="flex justify-center w-full md:w-auto">
@@ -89,16 +108,14 @@ export default function ExperiencePage() {
                       />
                     </div>
 
-                    {/* Text */}
                     <div className="space-y-1 text-justify md:text-left w-full">
                       <h3 className="text-2xl font-semibold">{exp.role}</h3>
                       <p className="text-md font-medium">
                         {exp.company} • {exp.type}
                       </p>
 
-                      {/* FIXED 3-MONTH DURATION */}
                       <p className="text-sm">
-                        {exp.duration} • 3 months
+                        {calculateExperience(exp.startDate, exp.endDate)}
                       </p>
 
                       <p className="mt-2 text-justify">{exp.description}</p>
