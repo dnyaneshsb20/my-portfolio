@@ -81,7 +81,7 @@ const SkillsSection = () => {
         {/* Category wise skills */}
         {skillCategories.map((category, index) => (
           <div key={index} className="mb-5 text-center max-w-7xl mx-auto">
-            <Card className="flex flex-col rounded-2xl shadow-lg">
+            <Card className="flex flex-col rounded-2xl shadow-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
               <CardContent className="p-8 text-center">
                 {/* Category Title */}
                 <h3 className="text-2xl font-bold text-primary mb-6 text-center">

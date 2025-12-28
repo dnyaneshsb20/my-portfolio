@@ -32,7 +32,7 @@ const CertificationsPage = () => {
           {certificates.map((cert, index) => (
             <div
               key={index}
-              className="flex flex-col justify-between items-center p-4 border rounded-xl shadow-md bg-white dark:bg-zinc-800 text-foreground dark:text-white h-full"
+              className="flex flex-col justify-between items-center p-4 border rounded-xl shadow-md bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-lg transition-shadow duration-300"
             >
               <div className="flex flex-col items-center gap-2 flex-grow w-full">
                 <img

@@ -107,7 +107,7 @@ const MiniProjectsSection = () => {
                 exit={{ opacity: 0, y: -50 }}
                 transition={{ duration: 0.5 }}
               >
-                <Card className="hover-scale flex flex-col h-full">
+                <Card className="hover-scale flex flex-col h-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
                   <CardHeader>
                     <CardTitle className="text-xl font-bold">
                       {project.title}

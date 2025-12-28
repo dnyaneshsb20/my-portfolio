@@ -38,7 +38,7 @@ const AboutSection = () => {
 
         {/* Row 1: Who I Am | What Drives Me | Hobbies */}
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-8">
-          <Card className="flex flex-col rounded-2xl shadow-lg">
+          <Card className="flex flex-col rounded-2xl shadow-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
             <CardContent className="p-8 flex-1 text-center">
               <h3 className="text-2xl font-bold text-primary mb-6">Who I Am</h3>
               <ul className="list-disc list-inside space-y-3 text-left max-w-md mx-auto">
@@ -51,7 +51,7 @@ const AboutSection = () => {
             </CardContent>
           </Card>
 
-          <Card className="flex flex-col rounded-2xl shadow-lg">
+          <Card className="flex flex-col rounded-2xl shadow-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
             <CardContent className="p-8 flex-1 text-center">
               <h3 className="text-2xl font-bold text-primary mb-6">What Drives Me</h3>
               <ul className="list-disc list-inside space-y-3 text-left max-w-md mx-auto">
@@ -64,7 +64,7 @@ const AboutSection = () => {
             </CardContent>
           </Card>
 
-          <Card className="flex flex-col rounded-2xl shadow-lg">
+          <Card className="flex flex-col rounded-2xl shadow-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
             <CardContent className="p-8 flex-1 text-center">
               <h3 className="text-2xl font-bold text-primary mb-6">Hobbies</h3>
               <ul className="list-disc list-inside space-y-3 text-left max-w-md mx-auto">
@@ -81,7 +81,7 @@ const AboutSection = () => {
         {/* Row 2: Learning Beyond the Academics */}
         <div className="max-w-7xl mx-auto flex flex-col gap-8">
           {/* ✅ Extra-Curricular */}
-          <Card className="flex flex-col rounded-2xl shadow-lg">
+          <Card className="flex flex-col rounded-2xl shadow-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
             <CardContent className="p-8 text-justify">
               <h3 className="text-2xl font-bold text-primary mb-6 text-center">Extra-Curricular Activities</h3>
               <ul className="list-disc list-outside text-foreground space-y-3 pl-6" ref={extraRef}>
@@ -104,7 +104,7 @@ const AboutSection = () => {
           </Card>
 
           {/* ✅ Co-Curricular */}
-          <Card className="flex flex-col rounded-2xl shadow-lg">
+          <Card className="flex flex-col rounded-2xl shadow-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
             <CardContent className="p-8 text-justify">
               <h3 className="text-2xl font-bold text-primary mb-6 text-center">Co-Curricular Activities</h3>
               <ul className="list-disc list-outside text-foreground space-y-3 pl-6" ref={coRef}>

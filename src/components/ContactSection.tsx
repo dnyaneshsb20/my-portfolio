@@ -145,7 +145,7 @@ const ContactSection = () => {
             </div>
           </div>
 
-          <Card className="hover-scale">
+          <Card className="hover-scale bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
             <CardHeader>
               <CardTitle>Send Me a Message</CardTitle>
               <CardDescription>I'd love to hear from you</CardDescription>
