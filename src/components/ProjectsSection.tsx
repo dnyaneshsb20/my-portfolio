@@ -46,7 +46,7 @@ const ProjectsSection = () => {
       image: HB
     },
     {
-      title: "QR Docs",
+      title: "SmartQR Docs",
       type: "Full-Stack Project | AI + Document Intelligence",
       description:
         "QR Docs is an AI-driven document management system that enables intelligent parsing, summarization, and querying of PDFs and text files. It integrates OCR, NLP, and retrieval-augmented generation to turn unstructured data into searchable, analyzable knowledge. Designed for research and enterprise use, it supports instant Q&A, schema mapping, and cross-document insights.",
