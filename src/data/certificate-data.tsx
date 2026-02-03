@@ -29,6 +29,8 @@ import certImage28 from '../assets/certificates/research.png'
 import certImage29 from '../assets/certificates/Cloud-Computing.jpeg'
 import certImage30 from '../assets/certificates/Hackathon-Certificate.jpg'
 import certImage31 from '../assets/certificates/Udemy-Complete-JAVASCRIPT-with HTML5,CSS3-from-zero-to-Expert-2025.jpg'
+import certImage32 from '../assets/certificates/AIT-Hackathon-Certificate.jpg.jpeg';
+import certImage33 from '../assets/certificates/Suryodaya-College-of-Engineering-and-Technology-Hackathon.jpg';
 
 export const certificates = [
   {
@@ -79,6 +81,20 @@ export const certificates = [
     issueDate: "November 2024",
     url: "https://drive.google.com/file/d/1ef2mAYs5Sgw7KeA1k1V1P14OO6trjkGq/view?usp=sharing",
     image: certImage3,
+  },
+  {
+    title: "Innerve - Certificate of Participation",
+    organization: "Army Institute of Technology, Pune",
+    issueDate: "January 2026",
+    url: "https://drive.google.com/file/d/1mR37MD1x9urmsqMeTXf9sNYPyR1fGeml/view?usp=sharing",
+    image: certImage32,
+  },
+  {
+    title: "Central India Hackathon 3.0 - Certificate of Participation",
+    organization: "Suryoday College of Engineering & Technology, Nagpur",
+    issueDate: "February 2026",
+    url: "https://drive.google.com/file/d/1gfgVc4lBwsR91RsCCA5cp1NQFr-2Aw4d/view?usp=sharing",
+    image: certImage33,
   },
   {
     title: "HP Power Lab 2.0 – Certificate of Participation",
