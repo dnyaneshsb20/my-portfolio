@@ -110,7 +110,7 @@ export default function EducationPage() {
                       <img
                         src={edu.logo}
                         alt={edu.title}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain"
                       />
                     </div>
 

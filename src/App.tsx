@@ -28,6 +28,7 @@ import AssemblyVerification from "../src/pages/AssemblyVerification"
 import MedicalBillingAnalyzer from "./pages/MedicalBillAnalyzer";
 import CampusZ from "./pages/CampusZ";
 import Publications from "./pages/Publications";
+import SmartQRDocs from "./pages/SmartQRDocs"
 
 const queryClient = new QueryClient();
 
@@ -49,7 +50,6 @@ const ScrollHandler = () => {
 
   return null;
 };
-
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -80,6 +80,7 @@ const App = () => (
               <Route path="/experience" element={<ExperiencePage />} />
               <Route path="/publications" element={<Publications/>}/>
               <Route path="/project/assembly" element={<AssemblyVerification/>}/>
+              <Route path="/project/qrdocs" element={<SmartQRDocs/>}/>
               <Route path="/medicalbill" element={<MedicalBillingAnalyzer/>}/>
               <Route path="*" element={<NotFound />} />
             </Routes>

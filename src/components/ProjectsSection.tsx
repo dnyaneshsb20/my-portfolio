@@ -11,6 +11,8 @@ import HB from "../assets/certificates/HB.png"
 import hackathon from "../assets/certificates/hackathon.jpeg"
 import smart from "../assets/certificates/smart.png"
 import campusz from "../assets/certificates/campusz.png"
+import ac from "../assets/certificates/AeroC.png"
+import ib from "../assets/certificates/ib.png"
 
 const ProjectsSection = () => {
   const [showComingSoon, setShowComingSoon] = useState(false);
@@ -37,6 +39,24 @@ const ProjectsSection = () => {
       image: hackathon
     },
     {
+      title: "AeroCommand",
+      type: "Web Application",
+      description:
+        "A modern drone fleet management and mission orchestration platform. AeroCommand enables organizations to plan, monitor, and analyze autonomous drone missions through an interactive dashboard, real-time mission control, and comprehensive survey analytics, ensuring operational visibility, efficiency, and scalability.",
+      link: "https://aerocommand.vercel.app/",
+      comingSoon: false,
+      image: ac
+    },
+    {
+      title: "IndusBot",
+      type: "Web Application",
+      description:
+        "A multilingual AI-powered assistant for industrial machine troubleshooting. IndusBot enables operators to report machine issues in regional languages and receive accurate, context-aware solutions using vector embeddings and Large Language Models, improving maintenance efficiency and reducing downtime.",
+      link: "/project/ib",
+      comingSoon: true,
+      image: ib
+    },
+    {
       title: "Heritage Bites",
       type: "Web Application | Research Project",
       description:
@@ -47,11 +67,11 @@ const ProjectsSection = () => {
     },
     {
       title: "SmartQR Docs",
-      type: "Full-Stack Project | AI + Document Intelligence",
+      type: "Full-Stack Project",
       description:
-        "QR Docs is an AI-driven document management system that enables intelligent parsing, summarization, and querying of PDFs and text files. It integrates OCR, NLP, and retrieval-augmented generation to turn unstructured data into searchable, analyzable knowledge. Designed for research and enterprise use, it supports instant Q&A, schema mapping, and cross-document insights.",
+        "SmartQR-Docs enables users to store documents once and share them securely using a unique QR that provides controlled, temporary access to authorized viewers, eliminating repeated submissions and manual handling.",
       link: "/project/qrdocs",
-      comingSoon: true,
+      comingSoon: false,
       image: smart,
     },
     {
