@@ -31,6 +31,7 @@ import certImage30 from '../assets/certificates/Hackathon-Certificate.jpg'
 import certImage31 from '../assets/certificates/Udemy-Complete-JAVASCRIPT-with HTML5,CSS3-from-zero-to-Expert-2025.jpg'
 import certImage32 from '../assets/certificates/AIT-Hackathon-Certificate.jpg.jpeg';
 import certImage33 from '../assets/certificates/Suryodaya-College-of-Engineering-and-Technology-Hackathon.jpg';
+import certImage34 from '../assets/certificates/navonmesh.jpeg'
 
 export const certificates = [
   {
@@ -102,6 +103,13 @@ export const certificates = [
     issueDate: "November 2025",
     url: "https://drive.google.com/file/d/1Tqugl1UKqkzQLLJonxPqKJu7QR1sSzrd/view?usp=sharing",
     image: certImage25,
+  },
+  {
+    title: "Navonmesh 2026 - National Finalist (6th Position)",
+    organization: "MES IMCC & MLOCE, Pune",
+    issueDate: "February 2026",
+    url: "https://drive.google.com/file/d/PASTE_YOUR_FILE_ID/view?usp=sharing",
+    image: certImage34,
   },
   {
     title: "MaTPO Aptitude Idol – 2025 (Certificate of Participation)",

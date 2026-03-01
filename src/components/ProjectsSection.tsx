@@ -13,10 +13,11 @@ import smart from "../assets/certificates/smart.png"
 import campusz from "../assets/certificates/campusz.png"
 import ac from "../assets/certificates/AeroC.png"
 import ib from "../assets/certificates/ib.png"
+import sprint from "../assets/certificates/sprint.png"
 
 const ProjectsSection = () => {
   const [showComingSoon, setShowComingSoon] = useState(false);
-  const [visibleCount, setVisibleCount] = useState(4); 
+  const [visibleCount, setVisibleCount] = useState(4);
   const [expanded, setExpanded] = useState(false);
 
   const projects = [
@@ -27,7 +28,7 @@ const ProjectsSection = () => {
         "Campus Z is a next-generation campus management ecosystem that unifies academics, administration, student services, and campus operations into a single smart digital platform. It includes smart attendance, centralized student profiles, grievance tracking, events hub, timetable automation, hostel & transport management, and an analytics dashboard for faculty and management. Designed for efficiency, transparency, and complete campus digital transformation.",
       link: "/project/campusz",
       comingSoon: false,
-      image: campusz 
+      image: campusz
     },
     {
       title: "AI-Powered Assembly Verification System",
@@ -46,6 +47,15 @@ const ProjectsSection = () => {
       link: "https://aerocommand.vercel.app/",
       comingSoon: false,
       image: ac
+    },
+    {
+      title: "SprintStock AI",
+      type: "Web Application",
+      description:
+        "A cloud-native AI-powered multi-warehouse inventory optimization platform. SprintStock AI dynamically detects stock imbalances, forecasts demand under uncertainty, and recommends cost-efficient internal transfers or vendor replenishment through a multi-agent decision system, delivering real-time risk insights, working capital optimization, and scalable supply chain automation.",
+      link: "https://agent-hacks45.vercel.app/",
+      comingSoon: false,
+      image: sprint
     },
     {
       title: "IndusBot",
