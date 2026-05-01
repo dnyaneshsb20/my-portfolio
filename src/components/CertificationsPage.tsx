@@ -6,7 +6,11 @@ import Header from './Header';
 import { Link } from 'react-router-dom';
 import Footer from '@/components/Footer';
 
-const CertificationsPage = () => {
+interface CertificationsPageProps {
+  onBack?: () => void;
+}
+
+const CertificationsPage = ({ onBack }: CertificationsPageProps) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -17,12 +21,19 @@ const CertificationsPage = () => {
 
       <div className="container mx-auto px-4 pb-10">
         <div className="mb-8 mt-24">
-          <Link to="/#intro" state={{ scrollTo: 'intro' }}>
-            <Button variant="ghost" className="mb-4">
+          {onBack ? (
+            <Button variant="ghost" className="mb-4" onClick={onBack}>
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Portfolio
             </Button>
-          </Link>
+          ) : (
+            <Link to="/#intro" state={{ scrollTo: 'intro' }}>
+              <Button variant="ghost" className="mb-4">
+                <ArrowLeft className="w-4 h-4 mr-2" />
+                Back to Portfolio
+              </Button>
+            </Link>
+          )}
           <div className="text-center">
             <h1 className="text-4xl font-bold mb-4">CERTIFICATIONS</h1>
           </div>

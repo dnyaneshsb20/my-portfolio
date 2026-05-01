@@ -32,6 +32,7 @@ import certImage31 from '../assets/certificates/Udemy-Complete-JAVASCRIPT-with H
 import certImage32 from '../assets/certificates/AIT-Hackathon-Certificate.jpg.jpeg';
 import certImage33 from '../assets/certificates/Suryodaya-College-of-Engineering-and-Technology-Hackathon.jpg';
 import certImage34 from '../assets/certificates/navonmesh.jpeg'
+import certImage35 from '../assets/certificates/spoken-python.jpg'
 
 export const certificates = [
   {
@@ -82,6 +83,13 @@ export const certificates = [
     issueDate: "November 2024",
     url: "https://drive.google.com/file/d/1ef2mAYs5Sgw7KeA1k1V1P14OO6trjkGq/view?usp=sharing",
     image: certImage3,
+  },
+  {
+    title: "Python Training",
+    organization: "Spoken Tutorial, IIT Bombay",
+    issueDate: "April 2026",
+    url: "https://drive.google.com/file/d/1Z4Ra3luzu1-pZVKF1hKYyywEQZU9NL2z/view?usp=sharing",
+    image: certImage35,
   },
   {
     title: "Innerve - Certificate of Participation",

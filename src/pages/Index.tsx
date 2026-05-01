@@ -11,15 +11,19 @@ import ContactSection from '@/components/ContactSection';
 import CertificationsPage from '@/components/CertificationsPage';
 import Footer from "@/components/Footer";
 
+let introPlayed = false;
+
 const Index = () => {
   const location = useLocation();
   const [showIntro, setShowIntro] = useState(() => {
+    if (introPlayed) return false;
     // Show intro only if no hash in URL (like #projects)
     return !window.location.hash;
   });
   const [showCertifications, setShowCertifications] = useState(false);
 
   const handleIntroComplete = () => {
+    introPlayed = true;
     setShowIntro(false);
   };
 

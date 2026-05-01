@@ -97,7 +97,7 @@ const MiniProjectsSection = () => {
           <h2 className="text-4xl font-bold mb-4">MINI PROJECTS</h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto items-stretch">
+        <div className="grid md:grid-cols-2 gap-6 max-w-7xl mx-auto items-stretch">
           <AnimatePresence>
             {miniProjects.slice(0, visibleCount).map((project, index) => (
               <motion.div

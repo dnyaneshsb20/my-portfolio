@@ -50,7 +50,7 @@ const ContactSection = () => {
           <p className="text-xl text-muted-foreground">Let's connect and discuss opportunities</p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-12 max-w-7xl mx-auto">
           <div>
             <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
             <div className="space-y-6">

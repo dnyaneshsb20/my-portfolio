@@ -11,7 +11,7 @@ const IntroSection = () => {
   return (
     <section id="intro" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background to-secondary/20 pt-24 md:pt-0">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
           {/* Left side - Text content */}
           <div className="text-left">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
