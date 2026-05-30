@@ -6,10 +6,25 @@ import Header from "../components/Header";
 import Footer from "@/components/Footer";
 import { Link } from 'react-router-dom';
 import certImage from "../assets/certificates/research.png";
+import certImage2 from "../assets/certificates/IB_RP.jpg";
 
 const publicationsData = [
   {
     id: 1,
+    title: "Multilingual Voice-Enabled AI Chatbots for Industrial Troubleshooting Using Unstructured Machine Manuals",
+    journal: "International Journal of Scientific Research and Engineering Development (IJSRED)",
+    date: "May 2026",
+    description: "Published research paper in IJSRED (Volume 9, Issue 3, May - June 2026). The paper explores the development of multilingual voice-enabled AI chatbots to assist in industrial troubleshooting by utilizing unstructured machine manuals.",
+    certificate: certImage2,
+    paperUrl: "https://www.ijsred.com/volume9/issue3/IJSRED-V9I3P150.pdf",
+    certificateUrl: "https://drive.google.com/file/d/17mkifwFqfZ3Eyi9h3V3VV-E0dRTbU2t4/view?usp=sharing",
+    status: "Published",
+    volume: "Volume 9, Issue 3",
+    doi: "ISSN: 2581-7175",
+    keywords: ["AI Chatbots", "Industrial Troubleshooting", "Multilingual", "Machine Manuals", "Voice-Enabled"]
+  },
+  {
+    id: 2,
     title: "HeritageBites: A Socio-Technical Approach for Promoting Indigenous Food Systems",
     journal: "International Journal of Scientific Research in Engineering & Management (IJSREM)",
     date: "November 19, 2025",

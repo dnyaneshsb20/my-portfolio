@@ -30,7 +30,7 @@ export default function ExperiencePage() {
         "Integrating AI/ML Solutions",
         "Building Visualization Dashboards",
       ],
-      technologies: ["Python", "SQLite", "SQL"]
+      technologies: ["Python", "SQLite", "SQL","ReactJS","Tailwind CSS","MySQL"]
     },
     {
       id: 2,

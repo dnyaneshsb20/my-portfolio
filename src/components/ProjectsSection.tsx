@@ -14,6 +14,7 @@ import campusz from "../assets/certificates/campusz.png"
 import ac from "../assets/certificates/AeroC.png"
 import ib from "../assets/certificates/ib.png"
 import sprint from "../assets/certificates/sprint.png"
+import dg from "../assets/certificates/dg.png"
 
 const ProjectsSection = () => {
   const [showComingSoon, setShowComingSoon] = useState(false);
@@ -66,6 +67,16 @@ const ProjectsSection = () => {
       comingSoon: true,
       image: ib
     },
+    {
+      title: "DroneGuard: AI Security Analyst Agent",
+      type: "Assessment Project | AI Agent + Full-Stack",
+      description:
+        "Built for the Flytbase AI Engineer Assessment, DroneGuard is a functional prototype of a docked drone security system. It processes simulated telemetry alongside Vision Language Model (VLM) frame descriptions using a LangChain-inspired AI agent to detect security threats like loitering or unauthorized entry in real-time. The system features cross-domain SQLite indexing for searchable historical logs and a modern, high-fidelity React dashboard with dynamic alerts.",
+      link: "https://drone-gaurd.vercel.app/",
+      comingSoon: false,
+      image: dg
+    },
+
     {
       title: "Heritage Bites",
       type: "Web Application | Research Project",

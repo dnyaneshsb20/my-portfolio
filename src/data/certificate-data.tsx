@@ -33,13 +33,17 @@ import certImage32 from '../assets/certificates/AIT-Hackathon-Certificate.jpg.jp
 import certImage33 from '../assets/certificates/Suryodaya-College-of-Engineering-and-Technology-Hackathon.jpg';
 import certImage34 from '../assets/certificates/navonmesh.jpeg'
 import certImage35 from '../assets/certificates/spoken-python.jpg'
+import certImage36 from '../assets/certificates/edgecomputing.jpg'
+import certImage37 from '../assets/certificates/soft-skills.jpg'
+import certImage38 from '../assets/certificates/IB_RP.jpg'
+import certImage39 from '../assets/certificates/EY-Techathon-Participation-Certificate.jpg'
 
 export const certificates = [
   {
     title: "Programming in Java",
     organization: "NPTEL, IIT Kharagpur",
     issueDate: "May 2025",
-    url: "https://internalapp.nptel.ac.in/noc/Ecertificate/?q=NPTEL25CS57S125520254604423764",
+    url: "https://nptel.ac.in/noc/E_Certificate/NPTEL25CS57S125520254604423764",
     image: certImage1,
   },
   {
@@ -57,6 +61,13 @@ export const certificates = [
     image: certImage30,
   },
   {
+    title: "Edge Computing",
+    organization: "IIT Kanpur",
+    issueDate: "May 2026",
+    url: "https://nptel.ac.in/noc/E_Certificate/NOC26CS30S66620083703131210",
+    image: certImage36,
+  },
+  {
     title: "Cloud Computing",
     organization: "NPTEL, IIT Kharagpur",
     issueDate: "November 2025",
@@ -64,11 +75,11 @@ export const certificates = [
     image: certImage29,
   },
   {
-    title: "JavaScript Training",
+    title: "Python Training",
     organization: "Spoken Tutorial, IIT Bombay",
-    issueDate: "October 2025",
-    url: "https://drive.google.com/file/d/1zQy5bAs6goHaD8LNh38kVp-YTYLC85tn/view?usp=drive_link",
-    image: certImage24,
+    issueDate: "April 2026",
+    url: "https://drive.google.com/file/d/1Z4Ra3luzu1-pZVKF1hKYyywEQZU9NL2z/view?usp=sharing",
+    image: certImage35,
   },
   {
     title: "Java Training",
@@ -78,18 +89,18 @@ export const certificates = [
     image: certImage2,
   },
   {
-    title: "CPP Training",
-    organization: "Spoken Tutorial, IIT Bombay",
-    issueDate: "November 2024",
-    url: "https://drive.google.com/file/d/1ef2mAYs5Sgw7KeA1k1V1P14OO6trjkGq/view?usp=sharing",
-    image: certImage3,
+    title: "Enhancing Soft Skills and Personality",
+    organization: "NPTEL IIT Kanpur",
+    issueDate: "May 2026",
+    url: "https://nptel.ac.in/noc/E_Certificate/NOC26HS47S155180453204488794",
+    image: certImage37,
   },
   {
-    title: "Python Training",
+    title: "JavaScript Training",
     organization: "Spoken Tutorial, IIT Bombay",
-    issueDate: "April 2026",
-    url: "https://drive.google.com/file/d/1Z4Ra3luzu1-pZVKF1hKYyywEQZU9NL2z/view?usp=sharing",
-    image: certImage35,
+    issueDate: "October 2025",
+    url: "https://drive.google.com/file/d/1zQy5bAs6goHaD8LNh38kVp-YTYLC85tn/view?usp=drive_link",
+    image: certImage24,
   },
   {
     title: "Innerve - Certificate of Participation",
@@ -106,6 +117,13 @@ export const certificates = [
     image: certImage33,
   },
   {
+    title: "CPP Training",
+    organization: "Spoken Tutorial, IIT Bombay",
+    issueDate: "November 2024",
+    url: "https://drive.google.com/file/d/1ef2mAYs5Sgw7KeA1k1V1P14OO6trjkGq/view?usp=sharing",
+    image: certImage3,
+  },
+  {
     title: "HP Power Lab 2.0 – Certificate of Participation",
     organization: "Hindustan Petroleum Corporation Ltd.",
     issueDate: "November 2025",
@@ -114,9 +132,9 @@ export const certificates = [
   },
   {
     title: "Navonmesh 2026 - National Finalist (6th Position)",
-    organization: "MES IMCC & MLOCE, Pune",
+    organization: "MES IMCC & MLCOE, Pune",
     issueDate: "February 2026",
-    url: "https://drive.google.com/file/d/PASTE_YOUR_FILE_ID/view?usp=sharing",
+    url: "https://drive.google.com/file/d/141nH8B_oAUtcdt_ka8ZPDHAzaKdH8diB/view?usp=sharing",
     image: certImage34,
   },
   {
@@ -125,6 +143,13 @@ export const certificates = [
     issueDate: "October 2025",
     url: "https://drive.google.com/file/d/1bJq2QuC-DhHU_tMurwG14a_VbSqN3chy/view?usp=drive_link",
     image: certImage23,
+  },
+  {
+    title: "EY Techathon – Certificate of Participation",
+    organization: "EY",
+    issueDate: "November 2025",
+    url: "https://drive.google.com/file/d/1QMz6Xqqh_hTlFuYZWVEAv4OabFUUumLy/view?usp=sharing",
+    image: certImage39,
   },
   {
     title: "Introduction to Generative AI",
@@ -174,6 +199,13 @@ export const certificates = [
     issueDate: "November 2025",
     url: "https://drive.google.com/file/d/1Db5nkXTKykKdANLAIKnOeh6C5y8LnO6s/view?usp=sharing",
     image: certImage27,
+  },
+  {
+    title: "Multilingual Voice-Enabled AI Chatbots for Industrial Troubleshooting Using Unstructured Machine Manuals",
+    organization: "International Journal of Scientific Research and Engineering Development (IJSRED)",
+    issueDate: "May 2026",
+    url: "https://www.ijsred.com/volume9/issue3/IJSRED-V9I3P150.pdf",
+    image: certImage38,
   },
   {
     title: "Problem-Solving (Basic)",
