@@ -2,19 +2,19 @@ import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import homepage from "../assets/certificates/homepage.png";
-import carddetails from "../assets/certificates/carddetails.jpg";
-import login from "../assets/certificates/login-page.png";
-import datapackets from "../assets/certificates/data-packet.png";
-import medicloud from "../assets/certificates/MediCloud.png";
-import HB from "../assets/certificates/HB.png"
-import hackathon from "../assets/certificates/hackathon.jpeg"
-import smart from "../assets/certificates/smart.png"
-import campusz from "../assets/certificates/campusz.png"
-import ac from "../assets/certificates/AeroC.png"
-import ib from "../assets/certificates/ib.png"
-import sprint from "../assets/certificates/sprint.png"
-import dg from "../assets/certificates/dg.png"
+import homepage from "../assets/certificates/homepage.webp";
+import carddetails from "../assets/certificates/carddetails.webp";
+import login from "../assets/certificates/login-page.webp";
+import datapackets from "../assets/certificates/data-packet.webp";
+import medicloud from "../assets/certificates/MediCloud.webp";
+import HB from "../assets/certificates/HB.webp"
+import hackathon from "../assets/certificates/hackathon_project.webp"
+import smart from "../assets/certificates/smart.webp"
+import campusz from "../assets/certificates/campusz.webp"
+import ac from "../assets/certificates/AeroC.webp"
+import ib from "../assets/certificates/ib.webp"
+import sprint from "../assets/certificates/sprint.webp"
+import dg from "../assets/certificates/dg.webp"
 
 const ProjectsSection = () => {
   const [showComingSoon, setShowComingSoon] = useState(false);

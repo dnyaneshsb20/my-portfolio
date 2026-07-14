@@ -1,12 +1,12 @@
-import { useEffect } from "react";
+﻿import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import Dashboard from "../assets/certificates/Dashboard.jpeg"
-import Authority from "../assets/certificates/Authority.jpeg"
-import Student from "../assets/certificates/Student.jpeg"
-import Verifier from "../assets/certificates/Verifier.jpeg"
-import Login from "../assets/certificates/LoginScreen.jpeg"
-import Admin from "../assets/certificates/Admin.jpeg"
+import Dashboard from "../assets/certificates/Dashboard.webp";
+import Authority from "../assets/certificates/Authority.webp";
+import Student from "../assets/certificates/Student.webp";
+import Verifier from "../assets/certificates/Verifier.webp";
+import Login from "../assets/certificates/LoginScreen.webp";
+import Admin from "../assets/certificates/Admin.webp";
 
 type ImageItem = {
   title: string;
@@ -24,18 +24,30 @@ const SmartQRDocs: React.FC = () => {
     { title: "Student Dashboard", src: Student },
     { title: "Verifier Dashboard", src: Verifier },
     { title: "Authority Dashboard", src: Authority },
-    { title: "Admin Dashhboard", src: Admin },
+    { title: "Admin Dashboard", src: Admin },
   ];
 
   return (
     <div className="min-h-screen bg-secondary/20 text-foreground flex flex-col">
-      <header className="bg-primary text-white dark:bg-background dark:text-white py-6 shadow-md text-center">
-        <h1 className="text-4xl font-bold mt-12 md:mt-0">
+
+      <header className="bg-primary text-white dark:bg-background dark:text-white py-6 shadow-md">
+        <div className="relative flex items-center justify-center px-4">
+          <Link
+            to="/#projects"
+            className="absolute left-4 flex items-center gap-2 text-white/90 hover:text-white dark:text-white/90 dark:hover:text-white transition-colors"
+          >
+            <span className="text-xl">&#8592;</span>
+            <span className="hidden sm:inline font-semibold">Back</span>
+          </Link>
+          <div className="text-center px-12">
+            <h1 className="text-3xl sm:text-4xl font-bold">
           SmartQR-Docs – Controlled Access to Documents via QR
         </h1>
         <h2 className="text-lg mt-1">
           Role-Based Access | QR Validation | Digital Document Workflow
         </h2>
+          </div>
+        </div>
       </header>
 
       <main className="flex-grow container mx-auto px-4 py-10 max-w-4xl">
@@ -45,20 +57,17 @@ const SmartQRDocs: React.FC = () => {
           <h2 className="text-2xl font-bold border-b border-primary pb-2 mb-4">
             About the Project
           </h2>
-
           <p className="text-justify mb-3">
             <strong>SmartQR-Docs</strong> is a secure document access platform
             designed to generate a single <strong>QR code for selected documents</strong>,
             enabling <strong>controlled sharing</strong> and
-            <strong>role-based access permissions</strong>.
+            <strong> role-based access permissions</strong>.
           </p>
-
           <p className="text-justify mb-3">
             Students can upload and manage their academic documents, while
             authorized verifiers can validate them instantly by scanning the
             generated QR code.
           </p>
-
           <p className="text-justify">
             It provides a centralized workflow where documents are stored securely,
             linked to unique users, and verified in real time through a clean dashboard.
@@ -70,7 +79,6 @@ const SmartQRDocs: React.FC = () => {
           <h2 className="text-2xl font-bold border-b border-primary pb-2 mb-4">
             Key Features
           </h2>
-
           <ul className="list-disc list-inside pl-4 space-y-1 text-justify">
             <li>Secure authentication and role-based navigation.</li>
             <li>Student dashboard for uploading and managing documents.</li>
@@ -87,11 +95,10 @@ const SmartQRDocs: React.FC = () => {
           <h2 className="text-2xl font-bold border-b border-primary pb-2 mb-4">
             Technology Used
           </h2>
-
           <ul className="list-disc list-inside pl-4 space-y-1 text-justify">
             <li><strong>Frontend:</strong> React Native (Expo)</li>
             <li><strong>Navigation:</strong> React Navigation (Native Stack)</li>
-            <li><strong>Backend & Auth:</strong> Supabase</li>
+            <li><strong>Backend &amp; Auth:</strong> Supabase</li>
             <li><strong>Database:</strong> PostgreSQL</li>
             <li><strong>QR Generation:</strong> QR Code Library</li>
             <li><strong>Storage:</strong> Supabase Storage</li>
@@ -104,7 +111,6 @@ const SmartQRDocs: React.FC = () => {
           <h2 className="text-2xl font-bold border-b border-primary pb-2 mb-4">
             Impact
           </h2>
-
           <ul className="list-disc list-inside pl-4 space-y-1 text-justify">
             <li>Eliminates manual verification process.</li>
             <li>Prevents document misuse through secure QR-based access.</li>
@@ -118,7 +124,6 @@ const SmartQRDocs: React.FC = () => {
           <h2 className="text-2xl font-bold border-b border-primary pb-2 mb-4">
             Future Scope
           </h2>
-
           <ul className="list-disc list-inside pl-4 space-y-1 text-justify">
             <li>Integration with university ERP systems.</li>
             <li>Blockchain-based document verification.</li>
@@ -126,28 +131,11 @@ const SmartQRDocs: React.FC = () => {
           </ul>
         </section>
 
-        {/* Demo Link */}
-        {/* <section className="mb-10">
-          <h2 className="text-2xl font-bold border-b border-primary pb-2 mb-4">
-            Demo Link
-          </h2>
-
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary font-semibold hover:underline"
-          >
-            View Project Demo
-          </a>
-        </section> */}
-
         {/* Output Screens */}
         <section>
           <h2 className="text-2xl font-bold border-b border-primary pb-2 mb-6">
             Output Screens
           </h2>
-
           <div className="grid md:grid-cols-3 gap-6">
             {images.map(({ title, src }, index) => (
               <div key={index}>
@@ -165,15 +153,8 @@ const SmartQRDocs: React.FC = () => {
       </main>
 
       <footer className="w-full text-center text-sm py-4 text-white bg-[#0F172A] dark:bg-background dark:text-white">
-        &copy; 2026 SmartQR-Docs | Controlled Access to Documents via QR
+        &copy; {new Date().getFullYear()} SmartQR-Docs | Controlled Access to Documents via QR
       </footer>
-
-      <Link
-        to="/#projects"
-        className="fixed top-6 left-6 bg-primary text-white dark:bg-muted dark:text-white px-4 py-2 rounded-lg shadow-md font-semibold hover:bg-primary/90 transition-all z-50"
-      >
-        🔙 Back to Portfolio
-      </Link>
     </div>
   );
 };

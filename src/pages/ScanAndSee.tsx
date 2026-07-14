@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
+﻿import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-import appscreen from '../assets/certificates/appscreen.jpg';
-import loginscreen from '../assets/certificates/loginscreen.jpg';
-import arstudiocamera from '../assets/certificates/arstudiocamera.jpg';
-import carddetails from '../assets/certificates/carddetails.jpg';
+import appscreen from '../assets/certificates/appscreen.webp';
+import loginscreen from '../assets/certificates/scan_loginscreen.webp';
+import arstudiocamera from '../assets/certificates/arstudiocamera.webp';
+import carddetails from '../assets/certificates/carddetails.webp';
 
 const ScanAndSee = () => {
   useEffect(() => {
@@ -20,9 +20,20 @@ const ScanAndSee = () => {
 
   return (
     <div className="min-h-screen bg-secondary/20 text-foreground flex flex-col">
-      <header className="bg-primary text-white dark:bg-background dark:text-white py-6 shadow-md text-center">
-        <h1 className="text-4xl font-bold mt-12 md:mt-0">Scan & See</h1>
+      <header className="bg-primary text-white dark:bg-background dark:text-white py-6 shadow-md">
+        <div className="relative flex items-center justify-center px-4">
+          <Link
+            to="/#projects"
+            className="absolute left-4 flex items-center gap-2 text-white/90 hover:text-white dark:text-white/90 dark:hover:text-white transition-colors"
+          >
+            <span className="text-xl">&#8592;</span>
+            <span className="hidden sm:inline font-semibold">Back</span>
+          </Link>
+          <div className="text-center px-12">
+            <h1 className="text-3xl sm:text-4xl font-bold">Scan & See</h1>
         <h2 className="text-lg mt-1">Augmented Reality for Instant Data Access</h2>
+          </div>
+        </div>
       </header>
 
       <main className="flex-grow container mx-auto px-4 py-10 max-w-4xl">
@@ -89,15 +100,8 @@ const ScanAndSee = () => {
       </main>
 
       <footer className="w-full text-center text-sm py-4 text-white bg-[#0F172A] dark:bg-background dark:text-white">
-        &copy; 2025 Dnyanesh Badave | Scan & See – Augmented Reality for Instant Data Access
+        &copy; {new Date().getFullYear()} Dnyanesh Badave | Scan & See – Augmented Reality for Instant Data Access
       </footer>
-
-      <Link
-        to="/#projects"
-        className="fixed top-6 left-6 bg-primary text-white dark:bg-muted dark:text-white px-4 py-2 rounded-lg shadow-md font-semibold hover:bg-primary/90 transition-all z-50"
-      >
-        🔙 Back to Portfolio
-      </Link>
     </div>
   );
 };

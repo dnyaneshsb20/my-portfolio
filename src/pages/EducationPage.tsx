@@ -6,9 +6,9 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Link } from 'react-router-dom';
 
-import modernCollege from "../assets/certificates/mcoe.png";
-import sangameshwarCollege from "../assets/certificates/san.png";
-import jnanaPrabodhini from "../assets/certificates/Jnana-Prabodhini.jpg";
+import modernCollege from "../assets/certificates/mcoe.webp";
+import sangameshwarCollege from "../assets/certificates/san.webp";
+import jnanaPrabodhini from "../assets/certificates/Jnana-Prabodhini.webp";
 
 export default function EducationPage() {
   useEffect(() => {
@@ -21,11 +21,11 @@ export default function EducationPage() {
       logo: modernCollege,
       title: "Progressive Education Society's Modern College of Engineering, Pune",
       degree: "Master in Computer Application (MCA)",
-      duration: "September 2024 - Present",
+      duration: "September 2024 - June 2026",
       resultLabel: "CGPA:",
-      resultValue: "8.0/10.0",
-      status: "Pursuing",
-      description: "Pursuing a Master of Computer Applications (MCA) degree, currently in the first year, with a CGPA of 8.0.",
+      resultValue: "8.43/10.0",
+      status: "Completed",
+      description: "Completed a Master of Computer Applications (MCA) degree, with a CGPA of 8.43.",
       location: "Pune, Maharashtra"
     },
     {
@@ -70,27 +70,28 @@ export default function EducationPage() {
     <div className="min-h-screen bg-gradient-to-br from-background to-secondary/20">
       <Header onCertificationsClick={() => { }} />
 
-      <main className="container mx-auto px-4 py-8">
+      <main className="container mx-auto px-4 pt-24 pb-8">
         {/* Header Section */}
-        <div className="mb-10 mt-10">
-          <div className="flex items-center justify-start mb-8">
-            <Link to="/#intro" state={{ scrollTo: 'intro' }}>
-              <Button
-                variant="ghost"
-                className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 relative top-8"
-              >
-                <ArrowLeft className="w-4 h-4" />
-                Back
-              </Button>
-            </Link>
-          </div>
-
-          <div className="max-w-4xl mx-auto -mt-6">
-            <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-                EDUCATION
-              </h1>
+        <div className="mb-10">
+          {/* Back Button + Title on same level */}
+          <div className="max-w-5xl mx-auto w-full relative flex items-center justify-center mb-10">
+            {/* Back Button - absolute left */}
+            <div className="absolute left-0">
+              <Link to="/#intro" state={{ scrollTo: 'intro' }}>
+                <Button
+                  variant="ghost"
+                  className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100"
+                >
+                  <ArrowLeft className="w-5 h-5" />
+                  <span className="hidden sm:inline">Back</span>
+                </Button>
+              </Link>
             </div>
+
+            {/* Title - centered */}
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white text-center px-12">
+              EDUCATION
+            </h1>
           </div>
         </div>
 

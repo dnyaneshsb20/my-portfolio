@@ -1,12 +1,12 @@
-import { useEffect } from 'react';
+﻿import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-import registration from '../assets/certificates/ragistration.png';
-import login from '../assets/certificates/login-page.png';
-import registrationSuccess from '../assets/certificates/registration-sucessfull.png';
-import loginSuccess from '../assets/certificates/Login-Sucessfull.png';
-import otpVerification from '../assets/certificates/OTP-Verification.png';
-import invalidLogin from '../assets/certificates/Invalid-Login.png';
+import registration from '../assets/certificates/ragistration.webp';
+import login from '../assets/certificates/login-page.webp';
+import registrationSuccess from '../assets/certificates/registration-sucessfull.webp';
+import loginSuccess from '../assets/certificates/Login-Sucessfull.webp';
+import otpVerification from '../assets/certificates/OTP-Verification.webp';
+import invalidLogin from '../assets/certificates/Invalid-Login.webp';
 
 const UserAuthSystem = () => {
   useEffect(() => {
@@ -24,9 +24,20 @@ const UserAuthSystem = () => {
 
   return (
     <div className="min-h-screen bg-secondary/20 text-foreground flex flex-col">
-      <header className="bg-primary text-white dark:bg-background dark:text-white py-6 shadow-md text-center">
-        <h1 className="text-4xl font-bold mt-12 md:mt-0">User Authentication System</h1>
+      <header className="bg-primary text-white dark:bg-background dark:text-white py-6 shadow-md">
+        <div className="relative flex items-center justify-center px-4">
+          <Link
+            to="/#projects"
+            className="absolute left-4 flex items-center gap-2 text-white/90 hover:text-white dark:text-white/90 dark:hover:text-white transition-colors"
+          >
+            <span className="text-xl">&#8592;</span>
+            <span className="hidden sm:inline font-semibold">Back</span>
+          </Link>
+          <div className="text-center px-12">
+            <h1 className="text-3xl sm:text-4xl font-bold">User Authentication System</h1>
         <h2 className="text-lg mt-1">Web Application</h2>
+          </div>
+        </div>
       </header>
 
       <main className="flex-grow container mx-auto px-4 py-10 max-w-4xl">
@@ -107,15 +118,8 @@ const UserAuthSystem = () => {
       </main>
 
       <footer className="w-full text-center text-sm py-4 text-white bg-[#0F172A] dark:bg-background dark:text-white">
-        &copy; 2025 Dnyanesh Badave | User Authentication System
+        &copy; {new Date().getFullYear()} Dnyanesh Badave | User Authentication System
       </footer>
-
-      <Link
-        to="/#projects"
-        className="fixed top-6 left-6 bg-primary text-white dark:bg-muted dark:text-white px-4 py-2 rounded-lg shadow-md font-semibold hover:bg-primary/90 transition-all z-50"
-      >
-        🔙 Back to Portfolio
-      </Link>
     </div>
   );
 };

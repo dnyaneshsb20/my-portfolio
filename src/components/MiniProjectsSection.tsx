@@ -1,15 +1,15 @@
 import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { motion, AnimatePresence } from "framer-motion";
-import clapImg from "../assets/certificates/clap.jpg";
-import todoImg from "../assets/certificates/todo2.png";
-import turtleImg from "../assets/certificates/Turtle.png";
-import snakeImg from "../assets/certificates/Snake.png";
-import quizImg from "../assets/certificates/quiz1.png";
-import workImg from "../assets/certificates/work2.png";
-import passImg from "../assets/certificates/PasswordManager-GUI.png";
-import paddleImg from "../assets/certificates/Paddle1.png";
-import medi from "../assets/certificates/medi5.jpg"
+import clapImg from "../assets/certificates/clap.webp";
+import todoImg from "../assets/certificates/todo2.webp";
+import turtleImg from "../assets/certificates/Turtle.webp";
+import snakeImg from "../assets/certificates/Snake.webp";
+import quizImg from "../assets/certificates/quiz1.webp";
+import workImg from "../assets/certificates/work2.webp";
+import passImg from "../assets/certificates/PasswordManager-GUI.webp";
+import paddleImg from "../assets/certificates/Paddle1.webp";
+import medi from "../assets/certificates/medi5.webp"
 
 const MiniProjectsSection = () => {
   const [showComingSoon, setShowComingSoon] = useState(false);

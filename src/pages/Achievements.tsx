@@ -5,10 +5,10 @@ import { ArrowLeft, Trophy, Calendar, Award, ChevronLeft, ChevronRight, MapPin }
 import Header from '../components/Header';
 import Footer from '@/components/Footer';
 import { Link } from 'react-router-dom';
-import img1 from '../assets/certificates/h1.jpg';
-import img2 from '../assets/certificates/h2.jpg';
-import img3 from '../assets/certificates/h3.jpg';
-import img4 from '../assets/certificates/h4.jpg';
+import img1 from '../assets/certificates/h1.webp';
+import img2 from '../assets/certificates/h2.webp';
+import img3 from '../assets/certificates/h3.webp';
+import img4 from '../assets/certificates/h4.webp';
 import img5 from '../assets/certificates/h5.webp';
 
 const Achievements = () => {
@@ -34,29 +34,28 @@ const Achievements = () => {
         <div className="min-h-screen bg-gradient-to-br from-background to-secondary/20">
             <Header onCertificationsClick={() => { }} />
 
-            <main className="container mx-auto px-4 sm:px-6 py-4 sm:py-8">
+            <main className="container mx-auto px-4 sm:px-6 pt-24 pb-8">
                 {/* Header Section */}
-                <div className="mb-6 sm:mb-10 mt-4 sm:mt-5">
-                    {/* Back Button */}
-                    <div className="flex items-center justify-start mb-4 sm:mb-8">
-                        <Link to="/#intro" state={{ scrollTo: 'intro' }}>
-                            <Button
-                                variant="ghost"
-                                className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 relative top-4 sm:top-8 text-sm sm:text-base"
-                            >
-                                <ArrowLeft className="w-3 h-3 sm:w-4 sm:h-4" />
-                                Back
-                            </Button>
-                        </Link>
-                    </div>
-
-                    {/* Heading Section */}
-                    <div className="max-w-4xl mx-auto -mt-4 sm:-mt-6">
-                        <div className="text-center mb-6 sm:mb-10">
-                            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-4">
-                                ACHIEVEMENTS
-                            </h1>
+                <div className="mb-6 sm:mb-10">
+                    {/* Back Button + Title on same level */}
+                    <div className="max-w-7xl mx-auto w-full relative flex items-center justify-center mb-6 sm:mb-10">
+                        {/* Back Button - absolute left */}
+                        <div className="absolute left-0">
+                            <Link to="/#intro" state={{ scrollTo: 'intro' }}>
+                                <Button
+                                    variant="ghost"
+                                    className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 text-sm sm:text-base"
+                                >
+                                    <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5" />
+                                    <span className="hidden sm:inline">Back</span>
+                                </Button>
+                            </Link>
                         </div>
+
+                        {/* Title - centered */}
+                        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white text-center px-12">
+                            ACHIEVEMENTS
+                        </h1>
                     </div>
                 </div>
 

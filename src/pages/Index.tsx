@@ -11,19 +11,23 @@ import ContactSection from '@/components/ContactSection';
 import CertificationsPage from '@/components/CertificationsPage';
 import Footer from "@/components/Footer";
 
-let introPlayed = false;
-
+// Show intro only on first ever page load per session (not on SPA navigation)
 const Index = () => {
   const location = useLocation();
   const [showIntro, setShowIntro] = useState(() => {
-    if (introPlayed) return false;
-    // Show intro only if no hash in URL (like #projects)
-    return !window.location.hash;
+    // If arrived here via SPA navigation (state set), skip intro
+    if (location.state?.scrollTo || location.state?.skipIntro) return false;
+    // If arrived via hash (e.g. /#projects back button), skip intro
+    if (window.location.hash) return false;
+    // If already played this session, skip intro
+    if (sessionStorage.getItem('introPlayed')) return false;
+    // Show intro on fresh page load
+    return true;
   });
   const [showCertifications, setShowCertifications] = useState(false);
 
   const handleIntroComplete = () => {
-    introPlayed = true;
+    sessionStorage.setItem('introPlayed', 'true');
     setShowIntro(false);
   };
 
@@ -35,17 +39,19 @@ const Index = () => {
     setShowCertifications(false);
   };
 
-  // Scroll to specific section if URL has hash like "#projects"
+  // Scroll to section from location.state or hash (back buttons from project pages)
   useEffect(() => {
-    if (location.hash) {
-      const target = document.querySelector(location.hash);
-      if (target) {
-        setTimeout(() => {
-          target.scrollIntoView({ behavior: 'smooth' });
-        }, 100); // delay to allow DOM to load
-      }
+    if (showIntro) return;
+    const scrollTarget = location.state?.scrollTo;
+    const hashTarget = location.hash?.replace('#', '');
+    const target = scrollTarget || hashTarget;
+    if (target) {
+      setTimeout(() => {
+        const el = document.getElementById(target);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
     }
-  }, [location]);
+  }, [location.state, location.hash, showIntro]);
 
   if (showIntro) {
     return <SlidingIntro onComplete={handleIntroComplete} />;

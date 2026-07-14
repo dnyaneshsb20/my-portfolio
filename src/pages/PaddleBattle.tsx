@@ -1,8 +1,8 @@
-import { useEffect } from "react";
+﻿import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import paddleImg1 from "../assets/certificates/Paddle1.png";
-import paddleImg2 from "../assets/certificates/Paddle2.png";
+import paddleImg1 from "../assets/certificates/Paddle1.webp";
+import paddleImg2 from "../assets/certificates/Paddle2.webp";
 
 const paddleScreens = [
   { title: "Game Start", image: paddleImg1 },
@@ -16,9 +16,20 @@ const PaddleBattle = () => {
 
   return (
     <div className="min-h-screen bg-secondary/20 text-foreground flex flex-col">
-      <header className="bg-primary text-white dark:bg-background dark:text-white py-6 shadow-md text-center">
-        <h1 className="text-4xl font-bold mt-12 md:mt-0">Paddle Battle - 2 Player Ball Game</h1>
+      <header className="bg-primary text-white dark:bg-background dark:text-white py-6 shadow-md">
+        <div className="relative flex items-center justify-center px-4">
+          <Link
+            to="/#mini-projects"
+            className="absolute left-4 flex items-center gap-2 text-white/90 hover:text-white dark:text-white/90 dark:hover:text-white transition-colors"
+          >
+            <span className="text-xl">&#8592;</span>
+            <span className="hidden sm:inline font-semibold">Back</span>
+          </Link>
+          <div className="text-center px-12">
+            <h1 className="text-3xl sm:text-4xl font-bold">Paddle Battle - 2 Player Ball Game</h1>
         <h2 className="text-lg mt-1">Python Desktop Based Game</h2>
+          </div>
+        </div>
       </header>
 
       <main className="flex-grow container mx-auto px-4 py-10 max-w-4xl">
@@ -71,15 +82,8 @@ const PaddleBattle = () => {
       </main>
 
       <footer className="w-full text-center text-sm py-4 text-white bg-[#0F172A] dark:bg-background dark:text-white">
-        &copy; 2023 Dnyanesh Badave | Paddle Battle
+        &copy; {new Date().getFullYear()} Dnyanesh Badave | Paddle Battle
       </footer>
-
-      <Link
-        to="/#mini-projects"
-        className="fixed top-6 left-6 bg-primary text-white dark:bg-muted dark:text-white px-4 py-2 rounded-lg shadow-md font-semibold hover:bg-primary/90 transition-all z-50"
-      >
-        🔙 Back to Portfolio
-      </Link>
     </div>
   );
 };

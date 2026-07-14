@@ -1,16 +1,16 @@
-import { useEffect } from 'react';
+﻿import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-import adminlogin from '../assets/certificates/adminlogin.png';
-import homepage from '../assets/certificates/homepage.png';
-import manageproduct from '../assets/certificates/manageproduct.png';
-import managecategory from '../assets/certificates/managecategory.png';
-import generatebill from '../assets/certificates/generatebill.png';
-import invoice from '../assets/certificates/invoice.png';
-import bill from '../assets/certificates/bill.jpg';
-import reports from '../assets/certificates/reports.png';
-import changeusername from '../assets/certificates/changeusername.png';
-import changepassword from '../assets/certificates/changepassword.png';
+import adminlogin from '../assets/certificates/adminlogin.webp';
+import homepage from '../assets/certificates/homepage.webp';
+import manageproduct from '../assets/certificates/manageproduct.webp';
+import managecategory from '../assets/certificates/managecategory.webp';
+import generatebill from '../assets/certificates/generatebill.webp';
+import invoice from '../assets/certificates/invoice.webp';
+import bill from '../assets/certificates/bill.webp';
+import reports from '../assets/certificates/reports.webp';
+import changeusername from '../assets/certificates/changeusername.webp';
+import changepassword from '../assets/certificates/changepassword.webp';
 
 const MilkProducts = () => {
   useEffect(() => {
@@ -32,9 +32,20 @@ const MilkProducts = () => {
 
   return (
     <div className="min-h-screen bg-secondary/20 text-foreground flex flex-col">
-      <header className="bg-primary text-white dark:bg-background dark:text-white py-6 shadow-md text-center">
-        <h1 className="text-4xl font-bold mt-12 md:mt-0">Milk Products Management System</h1>
+      <header className="bg-primary text-white dark:bg-background dark:text-white py-6 shadow-md">
+        <div className="relative flex items-center justify-center px-4">
+          <Link
+            to="/#projects"
+            className="absolute left-4 flex items-center gap-2 text-white/90 hover:text-white dark:text-white/90 dark:hover:text-white transition-colors"
+          >
+            <span className="text-xl">&#8592;</span>
+            <span className="hidden sm:inline font-semibold">Back</span>
+          </Link>
+          <div className="text-center px-12">
+            <h1 className="text-3xl sm:text-4xl font-bold">Milk Products Management System</h1>
         <h2 className="text-lg mt-1">Desktop Application</h2>
+          </div>
+        </div>
       </header>
 
       <main className="flex-grow container mx-auto px-4 py-10 max-w-4xl">
@@ -95,15 +106,8 @@ const MilkProducts = () => {
       </main>
 
       <footer className="w-full text-center text-sm py-4 text-white bg-[#0F172A] dark:bg-background dark:text-white">
-        &copy; 2024 Dnyanesh Badave | Milk Products Management System
+        &copy; {new Date().getFullYear()} Dnyanesh Badave | Milk Products Management System
       </footer>
-
-      <Link
-        to="/#projects"
-        className="fixed top-6 left-6 bg-primary text-white dark:bg-muted dark:text-white px-4 py-2 rounded-lg shadow-md font-semibold hover:bg-primary/90 transition-all z-50"
-      >
-        🔙 Back to Portfolio
-      </Link>
     </div>
   );
 };

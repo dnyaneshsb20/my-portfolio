@@ -2,7 +2,7 @@ import React from "react";
 import { DiVisualstudio, DiMsqlServer, DiJavascript, DiNetbeans } from "react-icons/di";
 import { Card, CardContent } from '@/components/ui/card';
 import { FaJava } from "react-icons/fa6";
-import pythonLogo from "../assets/certificates/python-logo.png";
+import pythonLogo from "../assets/certificates/python-logo.webp";
 import { SiC, SiCplusplus, SiReact, SiDotnet, SiHtml5, SiAndroid, SiAndroidstudio, SiSublimetext, SiMysql, SiOracle, SiCss3, SiSupabase, SiTailwindcss, SiPhp, SiPhpmyadmin } from "react-icons/si";
 import { FaBug, FaComments, FaPuzzlePiece, FaProjectDiagram, FaUsers, FaSyncAlt, FaClock, FaNode, FaGitAlt, FaGithub } from "react-icons/fa";
 import { VscVscode } from "react-icons/vsc";

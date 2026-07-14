@@ -5,8 +5,8 @@ import { ArrowLeft, BookOpen, Calendar, FileText, ExternalLink, Award } from 'lu
 import Header from "../components/Header";
 import Footer from "@/components/Footer";
 import { Link } from 'react-router-dom';
-import certImage from "../assets/certificates/research.png";
-import certImage2 from "../assets/certificates/IB_RP.jpg";
+import certImage from "../assets/certificates/research.webp";
+import certImage2 from "../assets/certificates/IB_RP.webp";
 
 const publicationsData = [
   {
@@ -52,34 +52,33 @@ export default function Publications() {
         }}
       />
 
-      <main className="container mx-auto px-4 py-6">
+      <main className="container mx-auto px-4 pt-24 pb-6">
         {/* Header Section */}
-        <div className="mb-8 mt-10">
-          {/* Back Button */}
-          <div className="flex items-center justify-start mb-8">
-            <Link to="/#intro" state={{ scrollTo: 'intro' }}>
-              <Button
-                variant="ghost"
-                className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 relative top-8"
-              >
-                <ArrowLeft className="w-4 h-4" />
-                Back
-              </Button>
-            </Link>
-          </div>
-
-          {/* Heading Section */}
-          <div className="max-w-4xl mx-auto -mt-6">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-                PUBLICATIONS
-              </h1>
+        <div className="mb-8">
+          {/* Back Button + Title on same level */}
+          <div className="max-w-7xl mx-auto w-full relative flex items-center justify-center mb-10">
+            {/* Back Button - absolute left */}
+            <div className="absolute left-0">
+              <Link to="/#intro" state={{ scrollTo: 'intro' }}>
+                <Button
+                  variant="ghost"
+                  className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100"
+                >
+                  <ArrowLeft className="w-5 h-5" />
+                  <span className="hidden sm:inline">Back</span>
+                </Button>
+              </Link>
             </div>
+
+            {/* Title - centered */}
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white text-center px-12">
+              PUBLICATIONS
+            </h1>
           </div>
         </div>
 
         {/* Publications Section */}
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto flex flex-col gap-8">
           {publicationsData.map((pub) => (
             <Card
               key={pub.id}

@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { BadgeCheck, Boxes, Briefcase, Download, FileText, FolderKanban, GraduationCap, Mail, Menu, Sparkles, Trophy, User, X } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
-import logo from "../assets/certificates/favicon.png";
+import logo from "../assets/certificates/favicon.webp";
 import Achievements from '@/pages/Achievements';
 import { MdContacts } from "react-icons/md";
 import { IoBookSharp } from "react-icons/io5";
@@ -24,7 +24,7 @@ const Header = ({ onCertificationsClick }: HeaderProps) => {
         el.scrollIntoView({ behavior: 'smooth' });
       }
     } else {
-      navigate('/', { state: { scrollTo: sectionId } });
+      navigate('/', { state: { scrollTo: sectionId, skipIntro: true } });
     }
     setIsMenuOpen(false);
   };
@@ -55,17 +55,12 @@ const Header = ({ onCertificationsClick }: HeaderProps) => {
   };
 
   const handleViewResume = () => {
-    window.open('https://drive.google.com/file/d/1RIIGLSJ9431FfnzYK2ll2OmIgmjLSOcI/view?usp=sharing', '_blank');
+    window.open('https://drive.google.com/file/d/1bD1O2R46FToyn5U3fpik2gd7EgnGitOQ/view', '_blank');
     setIsMenuOpen(false);
   };
 
   const handleDownloadResume = () => {
-    const link = document.createElement('a');
-    link.href = 'https://drive.google.com/file/d/1RIIGLSJ9431FfnzYK2ll2OmIgmjLSOcI';
-    link.download = 'Dnyanesh_Santosh_Badave.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    window.open('https://drive.google.com/uc?export=download&id=1bD1O2R46FToyn5U3fpik2gd7EgnGitOQ', '_blank');
     setIsMenuOpen(false);
   };
 

@@ -20,22 +20,28 @@ const CertificationsPage = ({ onBack }: CertificationsPageProps) => {
       <Header onCertificationsClick={() => {}} />
 
       <div className="container mx-auto px-4 pb-10">
-        <div className="mb-8 mt-24">
-          {onBack ? (
-            <Button variant="ghost" className="mb-4" onClick={onBack}>
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Portfolio
-            </Button>
-          ) : (
-            <Link to="/#intro" state={{ scrollTo: 'intro' }}>
-              <Button variant="ghost" className="mb-4">
-                <ArrowLeft className="w-4 h-4 mr-2" />
-                Back to Portfolio
-              </Button>
-            </Link>
-          )}
-          <div className="text-center">
-            <h1 className="text-4xl font-bold mb-4">CERTIFICATIONS</h1>
+        <div className="mb-8 pt-24">
+          {/* Back Button + Title on same level */}
+          <div className="max-w-7xl mx-auto w-full relative flex items-center justify-center mb-10">
+            {/* Back Button - absolute left */}
+            <div className="absolute left-0">
+              {onBack ? (
+                <Button variant="ghost" className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100" onClick={onBack}>
+                  <ArrowLeft className="w-5 h-5" />
+                  <span className="hidden sm:inline">Back</span>
+                </Button>
+              ) : (
+                <Link to="/#intro" state={{ scrollTo: 'intro' }}>
+                  <Button variant="ghost" className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100">
+                    <ArrowLeft className="w-5 h-5" />
+                    <span className="hidden sm:inline">Back</span>
+                  </Button>
+                </Link>
+              )}
+            </div>
+
+            {/* Title - centered */}
+            <h1 className="text-4xl font-bold text-center px-12">CERTIFICATIONS</h1>
           </div>
         </div>
 

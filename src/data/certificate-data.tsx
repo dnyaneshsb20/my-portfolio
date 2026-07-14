@@ -1,42 +1,43 @@
-import certImage1 from '../assets/certificates/NPTEL-Programming-In-Java.jpg';
-import certImage2 from '../assets/certificates/JAVA-Training-Spoken-Tutorial-Certificate.jpg';
-import certImage3 from '../assets/certificates/CPP-Training-Spoken-Tutorial-Certificate.jpg';
-import certImage4 from '../assets/certificates/Python-Basic.jpg';
-import certImage5 from '../assets/certificates/Hackerrank-SQL-Basic-Certificate.jpg';
-import certImage6 from '../assets/certificates/Hackerrank-Java-Basic-Certificate.png';
-import certImage7 from '../assets/certificates/Hackerrank-Javascript-Basic-Certificat.png';
-import certImage8 from '../assets/certificates/ReactJS-Course-MindLuster-Certificate.jpg';
-import certImage9 from '../assets/certificates/Udemy-Python-Certificate.jpg';
-import certImage10 from '../assets/certificates/CSharp.jpg';
-import certImage11 from '../assets/certificates/Java.jpg';
-import certImage12 from '../assets/certificates/Python2.jpg';
-import certImage13 from '../assets/certificates/IPR-EVENT.jpg';
-import certImage14 from '../assets/certificates/nielit.jpg';
-import certImage15 from '../assets/certificates/all-in-one.jpg';
-import certImage16 from '../assets/certificates/Udemy-SQL.jpg';
-import certImage17 from '../assets/certificates/CSharpIntermediates.jpg'
-import certImage18 from '../assets/certificates/GenAI.png'
-import certImage19 from '../assets/certificates/Responsible-AI.png'
-import certImage20 from '../assets/certificates/Large-Language-Models-GC.png'
-import certImage21 from '../assets/certificates/problem-solving.png'
-import certImage22 from '../assets/certificates/hackathon.jpg'
-import certImage23 from '../assets/certificates/matpo.jpg'
-import certImage24 from '../assets/certificates/javascript.jpg'
-import certImage25 from '../assets/certificates/hp.jpg'
-import certImage26 from '../assets/certificates/advanced-excel.jpg'
-import certImage27 from '../assets/certificates/accept.png'
-import certImage28 from '../assets/certificates/research.png'
-import certImage29 from '../assets/certificates/Cloud-Computing.jpeg'
-import certImage30 from '../assets/certificates/Hackathon-Certificate.jpg'
-import certImage31 from '../assets/certificates/Udemy-Complete-JAVASCRIPT-with HTML5,CSS3-from-zero-to-Expert-2025.jpg'
-import certImage32 from '../assets/certificates/AIT-Hackathon-Certificate.jpg.jpeg';
-import certImage33 from '../assets/certificates/Suryodaya-College-of-Engineering-and-Technology-Hackathon.jpg';
-import certImage34 from '../assets/certificates/navonmesh.jpeg'
-import certImage35 from '../assets/certificates/spoken-python.jpg'
-import certImage36 from '../assets/certificates/edgecomputing.jpg'
-import certImage37 from '../assets/certificates/soft-skills.jpg'
-import certImage38 from '../assets/certificates/IB_RP.jpg'
-import certImage39 from '../assets/certificates/EY-Techathon-Participation-Certificate.jpg'
+import certImage1 from '../assets/certificates/NPTEL-Programming-In-Java.webp';
+import certImage2 from '../assets/certificates/JAVA-Training-Spoken-Tutorial-Certificate.webp';
+import certImage3 from '../assets/certificates/CPP-Training-Spoken-Tutorial-Certificate.webp';
+import certImage4 from '../assets/certificates/Python-Basic.webp';
+import certImage5 from '../assets/certificates/Hackerrank-SQL-Basic-Certificate.webp';
+import certImage6 from '../assets/certificates/Hackerrank-Java-Basic-Certificate.webp';
+import certImage7 from '../assets/certificates/Hackerrank-Javascript-Basic-Certificat.webp';
+import certImage8 from '../assets/certificates/ReactJS-Course-MindLuster-Certificate.webp';
+import certImage9 from '../assets/certificates/Udemy-Python-Certificate.webp';
+import certImage10 from '../assets/certificates/CSharp.webp';
+import certImage11 from '../assets/certificates/Java.webp';
+import certImage12 from '../assets/certificates/Python2.webp';
+import certImage13 from '../assets/certificates/IPR-EVENT.webp';
+import certImage14 from '../assets/certificates/nielit.webp';
+import certImage15 from '../assets/certificates/all-in-one.webp';
+import certImage16 from '../assets/certificates/Udemy-SQL.webp';
+import certImage17 from '../assets/certificates/CSharpIntermediates.webp'
+import certImage18 from '../assets/certificates/GenAI.webp'
+import certImage19 from '../assets/certificates/Responsible-AI.webp'
+import certImage20 from '../assets/certificates/Large-Language-Models-GC.webp'
+import certImage21 from '../assets/certificates/problem-solving.webp'
+import certImage22 from '../assets/certificates/hackathon.webp'
+import certImage23 from '../assets/certificates/matpo.webp'
+import certImage24 from '../assets/certificates/javascript.webp'
+import certImage25 from '../assets/certificates/hp.webp'
+import certImage26 from '../assets/certificates/advanced-excel.webp'
+import certImage27 from '../assets/certificates/accept.webp'
+import certImage28 from '../assets/certificates/research.webp'
+import certImage29 from '../assets/certificates/Cloud-Computing.webp'
+import certImage30 from '../assets/certificates/Hackathon-Certificate.webp'
+import certImage31 from '../assets/certificates/Udemy-Complete-JAVASCRIPT-with HTML5,CSS3-from-zero-to-Expert-2025.webp'
+import certImage32 from '../assets/certificates/AIT-Hackathon-Certificate.jpg.webp';
+import certImage33 from '../assets/certificates/Suryodaya-College-of-Engineering-and-Technology-Hackathon.webp';
+import certImage34 from '../assets/certificates/navonmesh.webp'
+import certImage35 from '../assets/certificates/spoken-python.webp'
+import certImage36 from '../assets/certificates/edgecomputing.webp'
+import certImage37 from '../assets/certificates/soft-skills.webp'
+import certImage38 from '../assets/certificates/IB_RP.webp'
+import certImage39 from '../assets/certificates/EY-Techathon-Participation-Certificate.webp'
+import certImage40 from '../assets/certificates/Manual Testing Simplilearn.webp'
 
 export const certificates = [
   {
@@ -311,5 +312,12 @@ export const certificates = [
     issueDate: "January 2024",
     url: "https://www.mindluster.com/student/certificate/15935058903",
     image: certImage26,
+  },
+  {
+    title: "Manual Testing",
+    organization: "Simplilearn",
+    issueDate: "2026",
+    url: "https://simpli-web.app.link/e/EvY41WjVL4b",
+    image: certImage40,
   },
 ];

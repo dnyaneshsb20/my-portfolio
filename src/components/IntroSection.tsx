@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import profileImage from '../assets/certificates/pic1.jpg';
+import profileImage from '../assets/certificates/pic1.webp';
 const IntroSection = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
