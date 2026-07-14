@@ -1,11 +1,11 @@
-﻿import React, { useEffect } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import Dashboard from "../assets/certificates/Dashboard.webp";
 import Authority from "../assets/certificates/Authority.webp";
 import Student from "../assets/certificates/Student.webp";
 import Verifier from "../assets/certificates/Verifier.webp";
-import Login from "../assets/certificates/LoginScreen.webp";
+import Login from "../assets/certificates/loginscreen.webp";
 import Admin from "../assets/certificates/Admin.webp";
 
 type ImageItem = {
