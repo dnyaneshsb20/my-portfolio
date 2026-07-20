@@ -63,7 +63,7 @@ export const certificates = [
   },
   {
     title: "Edge Computing",
-    organization: "IIT Kanpur",
+    organization: "NPTEL, IIT Kanpur",
     issueDate: "May 2026",
     url: "https://nptel.ac.in/noc/E_Certificate/NOC26CS30S66620083703131210",
     image: certImage36,
@@ -91,7 +91,7 @@ export const certificates = [
   },
   {
     title: "Enhancing Soft Skills and Personality",
-    organization: "NPTEL IIT Kanpur",
+    organization: "NPTEL, IIT Kanpur",
     issueDate: "May 2026",
     url: "https://nptel.ac.in/noc/E_Certificate/NOC26HS47S155180453204488794",
     image: certImage37,
@@ -314,7 +314,7 @@ export const certificates = [
     image: certImage26,
   },
   {
-    title: "Manual Testing",
+    title: "Software Testing",
     organization: "Simplilearn",
     issueDate: "2026",
     url: "https://simpli-web.app.link/e/EvY41WjVL4b",
