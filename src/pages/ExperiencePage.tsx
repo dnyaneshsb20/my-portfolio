@@ -1,28 +1,59 @@
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, Calendar, MapPin, Briefcase, CheckCircle } from 'lucide-react';
+import { PiCertificate } from "react-icons/pi";
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Link } from 'react-router-dom';
 import tm from '../assets/certificates/TATA-Motors.webp';
 import mu from "../assets/certificates/mu-logo.webp";
+import sat from "../assets/certificates/sat.jpeg"
 
 export default function ExperiencePage() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  const [expandedCards, setExpandedCards] = useState<Record<number, boolean>>({});
+
+  const toggleCard = (id: number) => {
+    setExpandedCards((prev) => ({
+      ...prev,
+      [id]: !prev[id],
+    }));
+  };
+
   const experienceList = [
     {
       id: 1,
+      logo: sat,
+      role: "Junior Data Scientist",
+      company: "SA Technologies Inc.",
+      startDate: "2026-08-14",
+      type: "Full Time",
+      location: "Pune, Maharashtra",
+      status: "Working",
+      description: "Driving data-centric solutions and building robust AI applications by leveraging modern frameworks, optimizing backend systems, and collaborating with cross-functional teams to deliver scalable, high-performance software products.",
+      responsibilities: [
+        "Contribute to the development and enhancement of scalable software applications, focusing on clean, maintainable, and production-ready solutions.",
+        "Develop and integrate backend APIs and frontend components while collaborating with cross-functional teams to deliver application features.",
+        "Work with modern development frameworks, databases, and cloud/AI technologies to build and optimize application workflows.",
+        "Troubleshoot and resolve application issues, improving system reliability, performance, and overall user experience.",
+        "Participate in code reviews, debugging, testing, and deployment activities while following industry-standard software development practices."
+      ],
+      technologies: ["Python", "Retrieval Augmented Generation", "Large Language Models", "Generative AI", "Agentic AI", "Machine Learning", "SQLite", "SQL", "ReactJS", "Tailwind CSS", "MySQL"]
+    },
+    {
+      id: 2,
       logo: tm,
       role: "Software Engineering Intern",
       company: "TATA MOTORS Digital.AI Labs Ltd",
       startDate: "2025-12-16",
+      endDate: "2026-08-13",
       type: "Internship",
       location: "Pimpri-Chinchwad, Pune, Maharashtra",
-      status: "Working",
+      status: "Completed",
       description: "Spearheading digital transformation by architecting AI-powered RAG pipelines, modernizing data infrastructure, and automating workflows to significantly enhance operational efficiency and data accuracy.",
       responsibilities: [
         "Engineered a RAG pipeline using vector embeddings and LLMs across 200+ industrial manuals, cutting manual lookup time by 50% and resolving queries in under 10 seconds.",
@@ -31,10 +62,11 @@ export default function ExperiencePage() {
         "Build automated web scraping pipelines spanning 15+ OEMs and 100+ models, replacing manual data collection and saving 10+ hours/week.",
         "Optimize 8+ FastAPI microservices and React frontend components while automating Excel/BI reporting, cutting report generation time by 45%."
       ],
-      technologies: ["Python", "SQLite", "SQL", "ReactJS", "Tailwind CSS", "MySQL"]
+      technologies: ["Python", "SQLite", "SQL", "ReactJS", "Tailwind CSS", "MySQL"],
+      certificateLink: "coming_soon"
     },
     {
-      id: 2,
+      id: 3,
       logo: mu,
       role: "Full Stack Developer Intern",
       company: "Media Urbana",
@@ -50,7 +82,8 @@ export default function ExperiencePage() {
         "Delivered 10+ frontend features and supported backend functionality, cutting development turnaround time by 25%.",
         "Collaborated with a 3-member team to ship 6+ client website updates, maintaining 100% on-time delivery."
       ],
-      technologies: ["HTML5", "CSS3", "Tailwind CSS", "JavaScript", "PHP", "MySQL"]
+      technologies: ["HTML5", "CSS3", "Tailwind CSS", "JavaScript", "PHP", "MySQL"],
+      certificateLink: "https://drive.google.com/file/d/17gZ8lbSQRK5cobpL2a9NoXb1I_9LAXa-/view?usp=drive_link"
     }
   ];
 
@@ -116,7 +149,7 @@ export default function ExperiencePage() {
                 key={exp.id}
                 className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-lg transition-shadow duration-300"
               >
-                <div className="p-8">
+                <div className="px-8 pt-8 pb-4">
                   {/* Header */}
                   <div className="flex flex-col md:flex-row md:items-start gap-6 mb-5">
                     {/* Logo */}
@@ -159,7 +192,7 @@ export default function ExperiencePage() {
                       </div>
 
                       {/* Details */}
-                      <div className="flex flex-wrap gap-4 text-sm text-gray-600 dark:text-gray-400">
+                      <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                         <div className="flex items-center gap-2">
                           <Calendar className="w-4 h-4" />
                           <span>{calculateExperience(exp.startDate, exp.endDate)}</span>
@@ -168,47 +201,78 @@ export default function ExperiencePage() {
                           <MapPin className="w-4 h-4" />
                           <span>{exp.location}</span>
                         </div>
+                        {(exp as any).certificateLink && (
+                          <div className="flex items-center ml-auto">
+                            {(exp as any).certificateLink === "coming_soon" ? (
+                              <Button variant="outline" size="sm" className="h-7 text-xs opacity-70 cursor-not-allowed" disabled>
+                                Certificate (Coming Soon)
+                              </Button>
+                            ) : (
+                              <a href={(exp as any).certificateLink} target="_blank" rel="noopener noreferrer">
+                                <Button variant="outline" size="sm" className="h-7 text-xs flex items-center gap-1 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:text-blue-600 dark:hover:text-blue-400 hover:border-blue-300 dark:hover:border-blue-700 transition-colors">
+                                  <PiCertificate className="w-4 h-4" />
+                                  View Certificate
+                                </Button>
+                              </a>
+                            )}
+                          </div>
+                        )}
                       </div>
                     </div>
                   </div>
 
-                  {/* Description */}
-                  <div className="mb-5">
-                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
-                      {exp.description}
-                    </p>
-                  </div>
+                  {/* Collapsible Content */}
+                  {expandedCards[exp.id] && (
+                    <div className="animate-in fade-in slide-in-from-top-2 duration-300">
+                      {/* Description */}
+                      <div className="mb-5 mt-2">
+                        <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+                          {exp.description}
+                        </p>
+                      </div>
 
-                  {/* Responsibilities */}
-                  <div className="mb-5">
-                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
-                      Key Responsibilities
-                    </h4>
-                    <div className="flex flex-col gap-3">
-                      {exp.responsibilities.map((resp, index) => (
-                        <div key={index} className="flex items-start gap-3">
-                          <CheckCircle className="w-4 h-4 text-blue-600 dark:text-blue-400 mt-1 flex-shrink-0" />
-                          <span className="text-gray-700 dark:text-gray-300">{resp}</span>
+                      {/* Responsibilities */}
+                      <div className="mb-5">
+                        <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+                          Key Responsibilities
+                        </h4>
+                        <div className="flex flex-col gap-3">
+                          {exp.responsibilities.map((resp, index) => (
+                            <div key={index} className="flex items-start gap-3">
+                              <CheckCircle className="w-4 h-4 text-blue-600 dark:text-blue-400 mt-1 flex-shrink-0" />
+                              <span className="text-gray-700 dark:text-gray-300 text-justify">{resp}</span>
+                            </div>
+                          ))}
                         </div>
-                      ))}
-                    </div>
-                  </div>
+                      </div>
 
-                  {/* Technologies */}
-                  <div>
-                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-                      Technologies Used
-                    </h4>
-                    <div className="flex flex-wrap gap-2">
-                      {exp.technologies.map((tech, index) => (
-                        <span
-                          key={index}
-                          className="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-md text-sm font-medium"
-                        >
-                          {tech}
-                        </span>
-                      ))}
+                      {/* Technologies */}
+                      <div>
+                        <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+                          Technologies Used
+                        </h4>
+                        <div className="flex flex-wrap gap-2">
+                          {exp.technologies.map((tech, index) => (
+                            <span
+                              key={index}
+                              className="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-md text-sm font-medium"
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
                     </div>
+                  )}
+
+                  {/* Toggle Button */}
+                  <div className="mt-3 pt-3 border-t border-gray-100 dark:border-gray-700 flex justify-center">
+                    <button
+                      onClick={() => toggleCard(exp.id)}
+                      className="text-blue-600 dark:text-blue-400 font-medium hover:underline focus:outline-none flex items-center justify-center w-full transition-colors"
+                    >
+                      {expandedCards[exp.id] ? "Show Less ▲" : "Read More ▼"}
+                    </button>
                   </div>
                 </div>
 
